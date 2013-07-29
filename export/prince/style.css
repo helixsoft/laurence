@@ -29,6 +29,18 @@
   font-style: normal;
   src: url(../../fonts/MarcellusSC-Regular.ttf) format("truetype");
 }
+@font-face {
+  font-family: 'Noto Serif';
+  font-weight: normal;
+  font-style: normal;
+  src: url(../../fonts/NotoSerif-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: 'Noto Serif';
+  font-weight: normal;
+  font-style: italic;
+  src: url(../../fonts/NotoSerif-Italic.ttf) format("truetype");
+}
 /* Override hierarchy. See: http://www.princexml.com/doc/8.1/pdf-bookmarks */
 h1, h2, h3, h4, h5, h6 {
   prince-bookmark-level: 1;
@@ -59,10 +71,11 @@ h1, h2, h3, h4, h5, h6 {
 /* TOC */
 @page toc {
   @bottom {
-  font-family: "Marcellus SC", serif;
+  font-family: "Noto Serif", serif;
   content: counter(page, lower-roman);
   vertical-align: center;
   text-transform: lowercase;
+  font-style: 10px;
   }
 }
 @page toc:blank {
@@ -77,12 +90,15 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 175px;
   }
   @top-left {
-  font-family: "Marcellus SC", serif;
-  content: string(book-author);
+  font-family: "Noto Serif", serif;
+  content: string(section-title);
   font-variant:small-caps;
   text-align: center;
   margin-top: 125px;
   margin-bottom: 75px;
+  font-size:10px;
+  font-style: italic;
+  text-transform: capitalize;
   }
 }
 @page chapter:right
@@ -94,12 +110,14 @@ h1, h2, h3, h4, h5, h6 {
 
   @top-right
   {
-  font-family: "Marcellus SC", serif;
+  font-family: "Noto Serif", serif;
   content: string(book-title);
   font-variant:small-caps;
   text-align: center;
   margin-top: 125px;
   margin-bottom: 75px;
+  font-size:10px;
+  font-style: normal;
   }
 }
 @page chapter:first {
@@ -111,26 +129,27 @@ h1, h2, h3, h4, h5, h6 {
   }
   @bottom {
   content: counter(page);
-  font-family: "Marcellus SC", serif;
+  font-family: "Noto Serif", serif;
   text-align: center;
   vertical-align: top;
-  border-top: 0.9px solid #000;
   width: 36px;
   margin-bottom: 20px;
   margin-top: 25px;
-  
+  font-size:10px;
+  font-style: italic;
   }
 }
 @page chapter{
   @bottom {
   content: counter(page);
-  font-family: "Marcellus SC", serif;  
+  font-family: "Noto Serif", serif;  
   text-align: center;
   vertical-align: top;
-  border-top: 0.9px solid #000;
   margin-bottom: 20px;
   margin-top: 25px;
   width: 36px;
+  font-size:10px;
+  font-style: italic;
   }
 }
 @page chapter:blank {
@@ -161,24 +180,29 @@ h1, h2, h3, h4, h5, h6 {
 
 @page introduction:left {
   @top-left {
-  font-family: "Marcellus SC", serif;
-  content: string(book-author);
+  font-family: "Noto Serif", serif;
+  content: string(section-title);
   font-variant:small-caps;
   text-align: center;
   vertical-align: bottom;
   padding-bottom: 20px;
   padding-top: 20px;
+  font-size:10px;
+  font-style: italic;
+  text-transform: capitalize;
   }
 }
 @page introduction:right {
   @top-right {
-  font-family: "Marcellus SC", serif;
+  font-family: "Noto Serif", serif;
   content: string(book-title);
   font-variant:small-caps;
   text-align: center;
   vertical-align: bottom;
   padding-bottom: 20px;
   padding-top: 20px;
+  font-size:10px;
+  font-style: normal;
   }
 }
 
@@ -191,23 +215,26 @@ h1, h2, h3, h4, h5, h6 {
   }
   @bottom {
   content: counter(page);
-  font-family: "Marcellus SC", serif;  
+  font-family: "Noto Serif", serif;  
   vertical-align: top;
   margin-bottom: 20px;
   margin-top: 25px;
+  font-size:10px;
+  font-style: italic;
   }
   
 }
 @page introduction{
   @bottom {
   content: counter(page);
-  font-family: "Marcellus SC", serif;  
+  font-family: "Noto Serif", serif;  
   text-align: center;
   vertical-align: top;
-  border-top: 0.9px solid #000;
   margin-bottom: 20px;
   margin-top: 25px;
   width: 36px;
+  font-size:10px;
+  font-style: italic;
   }
 }
 @page introduction:blank {
@@ -226,18 +253,21 @@ h1, h2, h3, h4, h5, h6 {
 {
   @top-left
   {
-  font-family: "Marcellus SC", serif;
-  content: string(book-author);
+  font-family: "Noto Serif", serif;
+  content: string(section-title);
   font-variant:small-caps;
   text-align: center;
   vertical-align: bottom;
   padding-bottom: 20px;
   padding-top: 20px;
+  font-size:10px;
+  font-style: italic;
+  text-transform: capitalize;
   }
 }
 @page front-matter:right {
   @top-right {
-  font-family: "Marcellus SC", serif;
+  font-family: "Noto Serif", serif;
   content: string(book-title);
   font-variant:small-caps;
   text-align: center;
@@ -255,26 +285,29 @@ h1, h2, h3, h4, h5, h6 {
   }
    @bottom {
   content: counter(page, lower-roman);
-  font-family: "Marcellus SC", serif;
+  font-family: "Noto Serif", serif;
   vertical-align: center;
   border-top: 0.9px solid #000;
   margin-bottom: 20px;
   margin-top: 25px;
   width: 36px;
   text-transform: lowercase;
+  font-size:10px;
+  font-style: italic;
   }
 }
 @page front-matter{
    @bottom {
     content: counter(page, lower-roman);
-    font-family: "Marcellus SC", serif;
+    font-family: "Noto Serif", serif;
     text-align: center;
     vertical-align: top;
-    border-top: 0.9px solid #000;
     margin-bottom: 20px;
     margin-top: 25px;
     width: 36px;
     text-transform: lowercase;
+    font-size:10px;
+  font-style: italic;
   }
 }
 @page front-matter:blank {
@@ -299,12 +332,15 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 175px;
   }
   @top-left {
-  font-family: "Marcellus SC", serif;
-  content: string(book-author);
+  font-family: "Noto Serif", serif;
+  content: string(section-title);
   font-variant:small-caps;
   text-align: center;
   margin-top: 125px;
   margin-bottom: 75px;
+  font-size:10px;
+  font-style: italic;
+  text-transform: capitalize;
   }
 }
 @page back-matter:right {
@@ -314,12 +350,14 @@ h1, h2, h3, h4, h5, h6 {
   }
   @top-right
   {
-  font-family: "Marcellus SC", serif;
+  font-family: "Noto Serif", serif;
   content: string(book-title);
   font-variant:small-caps;
   text-align: center;
   margin-top: 125px;
   margin-bottom: 75px;
+  font-size:10px;
+  font-style: normal;
   }
 }
 @page back-matter:first {
@@ -331,26 +369,28 @@ h1, h2, h3, h4, h5, h6 {
   }
   @bottom {
   content: counter(page);
-  font-family: "Marcellus SC", serif;
+  font-family: "Noto Serif", serif;
   text-align: center;
   vertical-align: top;
-  border-top: 0.9px solid #000;
   width: 36px;
   margin-bottom: 20px;
   margin-top: 25px;
+  font-size:10px;
+  font-style: italic;
   
   }
 }
 @page back-matter{
   @bottom {
   content: counter(page);
-  font-family: "Marcellus SC", serif;  
+  font-family: "Noto Serif", serif;  
   text-align: center;
   vertical-align: top;
-  border-top: 0.9px solid #000;
   margin-bottom: 20px;
   margin-top: 25px;
   width: 36px;
+  font-size:10px;
+  font-style: italic;
   }
 }
 @page back-matter:blank {
@@ -408,7 +448,7 @@ div.part {
 }
  
 body {
-  font:  10pt/1.1  "Sorts Mill Goudy", serif;
+  font:  10pt/1.1  "Noto Serif", serif;
   font-weight: 100;
 }
 
@@ -529,6 +569,9 @@ body > h1.title:first-child {
     margin-left: auto;
     margin-right: auto;
     letter-spacing: 1px;
+    line-height: 48px;
+    font-family: "Noto Serif",serif;
+    font-style: italic;
 }
 
 /* TITLE PAGE
@@ -550,6 +593,8 @@ body > h1.title:first-child {
   margin-top: 6cm;
   margin-left:  auto;
   margin-right: auto;
+  line-height: 48px;
+  font-style: italic;
 }
 #title-page > .subtitle{
   margin-top: 1cm;
@@ -557,6 +602,7 @@ body > h1.title:first-child {
   margin-left: auto;
   margin-right: auto;
   font-size: 16px;
+  font-family: "Noto Serif",serif;
 }
 
 #title-page > div.logo {
@@ -661,7 +707,7 @@ div.back-matter > div.ugc h6.short-title:first-of-type {
   height: 0;
 }
 div.front-matter .front-matter-title-wrap > h1:first-of-type, 
-div.chapter .chapter-title-wrap > h2:first-of-type,
+div.chapter .section-title-wrap > h2:first-of-type,
 div.back-matter .back-matter-title-wrap > h1:first-of-type  {
   font-size: 15pt;
   string-set: section-title content();
@@ -674,7 +720,10 @@ div.front-matter.preface .front-matter-title-wrap > h1:first-of-type,
   margin-top: 2cm;
   margin-bottom: 2.5cm; 
 }
-
+.front-matter-title{
+  font-family: "Noto Serif",serif;
+  font-style: italic;
+}
 
  /* TABLE OF CONTENTS
 ======================= */
@@ -1013,12 +1062,12 @@ p.bl_indent {
   margin-top: 7cm;
   font-style: normal;
 }
-.chapter-title{
+.section-title{
   text-transform: uppercase;
   font-size: 10pt;
   font-weight: normal;
 }
-.chapter-title::after{
+.section-title::after{
   content:""; 
   height:1px;
   background:#000; 
