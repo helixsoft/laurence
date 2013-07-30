@@ -566,6 +566,8 @@ body > h1.title:first-child {
     font-size: 22pt;
     width: 140px;
     margin-top: 6cm;
+    text-indent: 0;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
     letter-spacing: 1px;
@@ -602,6 +604,8 @@ body > h1.title:first-child {
   margin-left: auto;
   margin-right: auto;
   font-size: 16px;
+  font-variant: small-caps;
+  font-weight: bold;
   font-family: "Noto Serif",serif;
 }
 
@@ -617,19 +621,22 @@ body > h1.title:first-child {
 #title-page > .author {
  font-size: 12px;
   margin-top: 0.5cm;
+  font-variant: small-caps;
 
 }
 
 #title-page > .publisher {
-  font-size: 8px;
+  font-size: 10px;
+  font-weight: 200;
   float: bottom;
   margin-bottom: 0;
   text-transform: uppercase;
  }
 #title-page > .publisher-city {
-  font-size: 8px;
+  font-size: 10px;
   float: bottom;
   margin-top: 10px;
+  font-weight: 200;
 }
 
 
