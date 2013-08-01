@@ -41,6 +41,12 @@
   font-style: italic;
   src: url(../../fonts/NotoSerif-Italic.ttf) format("truetype");
 }
+@font-face {
+  font-family: 'Pathway Gothic One';
+  font-weight: normal;
+  font-style: italic;
+  src: url(../../fonts/PathwayGothicOne-Regular.ttf) format("truetype");
+}
 /* Override hierarchy. See: http://www.princexml.com/doc/8.1/pdf-bookmarks */
 h1, h2, h3, h4, h5, h6 {
   prince-bookmark-level: 1;
@@ -287,7 +293,6 @@ h1, h2, h3, h4, h5, h6 {
   content: counter(page, lower-roman);
   font-family: "Noto Serif", serif;
   vertical-align: center;
-  border-top: 0.9px solid #000;
   margin-bottom: 20px;
   margin-top: 25px;
   width: 36px;
@@ -635,11 +640,12 @@ body > h1.title:first-child {
 
 #copyright-page {
     page-break-before: always;
+    font-family: 'Pathway Gothic One', sans-serif;
 }
 
 
 #copyright-page p {
-   font-size: 9pt;
+   font-size: 6pt;
     text-indent: 0;
     margin-bottom: 0.5em;
 }
@@ -759,7 +765,7 @@ div.front-matter.preface .front-matter-title-wrap > h1:first-of-type,
 #toc {
   page-break-before: right;
   counter-reset: part; 
-  font-size: 10pt;
+  font-size: 10px;
 }
 #toc ul {
   counter-reset: chapter;
@@ -769,32 +775,33 @@ div.front-matter.preface .front-matter-title-wrap > h1:first-of-type,
   content: "Part "counter(part, upper-roman) ". ";
   counter-increment: part; 
 }
-#toc .chapter a::before {
-  content: counter(chapter) ". ";
-  counter-increment: chapter; 
-  margin-right: 7pt;  
+#toc .front-matter,#toc .chapter,#toc .part,#toc .back-matter {
+  margin-bottom: 10px;
 }
 
-#toc .part a::after {
-  content:'' ;
-}
 #toc .chapter + .back-matter {
   margin-top: 1.3em;
+}
+#toc .front-matter,#toc .chapter,#toc .part,#toc .back-matter{
+  font-style: italic;
 }
 #toc span.chapter-author,
 #toc span.chapter-subtitle {
   display: inline-block;
   font-style: italic;
-  margin-left: 2em;
   width: 85%;
+}
+#toc span.chapter-author{
+  font-style: normal;
+  text-transform: uppercase;
 }
 #toc span.chapter-author,
 #toc span.chapter-subtitle {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 #toc span.chapter-subtitle + 
 span.chapter-author {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   position: relative;
   top: -5px;
 }
