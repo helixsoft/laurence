@@ -12,10 +12,10 @@
 
 
 @import url("../../plugins/pressbooks/themes-book/pressbooks-book/style.css");
-@import url(http://fonts.googleapis.com/css?family=Marcellus+SC|Sorts+Mill+Goudy:400,400italic|Marcellus&subset=latin,latin-ext);
-
+@import url(http://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700,700italic|Pathway+Gothic+One|Marcellus+SC|Marcellus&subset=latin,latin-ext);
+@import url("../pressbooks-book/style.css");
 body {
-	font-family: "Sorts Mill Goudy", "Times New Roman" serif;
+	font-family: "Noto Serif", "Times New Roman" serif;
 	line-height: 1.5em;
 
 }
@@ -25,14 +25,14 @@ a {
 
 }
 /* h1, h2, h3, h4, h5, h6 {
-	font-family: "Sorts Mill Goudy", "Times New Roman" serif;
+	font-family: "Noto Serif", "Times New Roman" serif;
 	font-variant: normal;
 	text-align: left;
 }
 */
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: "Sorts Mill Goudy", serif;
+	font-family: "Noto Serif", serif;
 	margin-top: 5px;
 	padding-bottom: 4px;
 	font-variant: normal;
@@ -90,11 +90,17 @@ h3, h4, h5 {
 	Title, Subtitle, Authors & Aphorism
 *****************************************/
 .entry-title {
-	margin: 100px 0;
+	margin: 100px auto;
 	text-align: center;
-	font-family: "Marcellus SC", "Times New Roman" serif;
+	font-family: "Noto Serif", "Times New Roman" serif;
 	font-variant: normal;
-	text-transform: uppercase;
+	font-style: italic;
+	width: auto;
+	font-size: 34px;
+	line-height: 48px;
+}
+.single-front-matter .entry-title{
+	width: 180px;
 }
 .entry-title span {
 	display: none;
@@ -109,19 +115,26 @@ h3, h4, h5 {
 }
 .chapter_subtitle {
 	line-height: 2em;
-	margin: -80px 0 100px 0px;
+	margin: -80px auto 100px auto;
 	text-align: center;
-    text-transform: uppercase;
-	font-family: "Marcellus SC", "Times New Roman" serif;
 	font-variant: normal;	
-	font-style: italic;
+	font-style: normal;
 	font-size: 0.95em;
+	width: 340px;
+	text-align: justify;
+	text-transform: uppercase;
+}
 
+.front-matter .entry-content p{
+	text-align: justify;
+}
+.single-chapter .entry-content p{
+	text-align: justify;
 }
 .chapter_author {
 	margin: -70px 0 100px 0px;
 	text-align: center;
-	
+	text-transform: uppercase;
 
 	font-family: "Marcellus SC", "Times New Roman" serif;
 	font-variant: normal;	

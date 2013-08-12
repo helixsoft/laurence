@@ -8,10 +8,10 @@
 /**
  * Google Webfonts
  */
-function austen_enqueue_styles() {
-	wp_enqueue_style( 'austen-fonts', 'http://fonts.googleapis.com/css?family=MarcellusSC|SortsMillGoudy:400,400italic' );
+function laurence_enqueue_styles() {
+	wp_enqueue_style( 'laurence-fonts', 'http://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700,700italic|Pathway+Gothic+One|Marcellus+SC|Marcellus&subset=latin,latin-ext' );
 }
-add_action( 'wp_print_styles', 'austen_enqueue_styles' );
+add_action( 'wp_print_styles', 'laurence_enqueue_styles' );
 
 
 /**
@@ -21,7 +21,7 @@ add_action( 'wp_print_styles', 'austen_enqueue_styles' );
  *
  * @return string
  */
-function austen_theme_pdf_css_override( $css ) {
+function laurence_theme_pdf_css_override( $css ) {
 
 	// Translate "Part" to whatever language this book is in
 	$css .= '#toc .part a::before { content: "' . __( 'part', 'pressbooks' ) . ' "counter(part) ". "; }' . "\n";
@@ -29,7 +29,7 @@ function austen_theme_pdf_css_override( $css ) {
 
 	return $css;
 }
-add_filter( 'pb_pdf_css_override', 'austen_theme_pdf_css_override' );
+add_filter( 'pb_pdf_css_override', 'laurence_theme_pdf_css_override' );
 
 
 /**
@@ -39,11 +39,11 @@ add_filter( 'pb_pdf_css_override', 'austen_theme_pdf_css_override' );
  *
  * @return string
  */
-function austen_theme_ebook_css_override( $css ) {
+function laurence_theme_ebook_css_override( $css ) {
 
 	// Translate "Part" to whatever language this book is in
 	$css .= 'div.part-title-wrap > h3.part-number:before { content: "' . __( 'part', 'pressbooks' ) . ' "; }' . "\n";
 
 	return $css;
 }
-add_filter( 'pb_epub_css_override', 'austen_theme_ebook_css_override' );
+add_filter( 'pb_epub_css_override', 'laurence_theme_ebook_css_override' );
