@@ -149,15 +149,22 @@ p.bl_indent {
 ======================= */
 #title-page {
     text-align: center;
-    text-transform: uppercase;
 }
 #title-page > .title {
 	font-size: 2em;
 	margin-top: 10%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 180px;
+	font-style: italic;
 }
 #title-page > .subtitle {
 	font-size: 1.2em;
 	margin-top: 1em;
+	text-transform: uppercase;
+	width: 340px;
+	margin-left: auto;
+	margin-right: auto;
 }
 #title-page > .author {
 	font-size: 1em;
@@ -274,6 +281,7 @@ p.bl_indent {
     font-size: 1.7em;
 	margin:1em 0 3em;
 	text-align: center;
+	font-style: italic;
 }
 .part-number {
 	font-weight: normal;
@@ -296,26 +304,18 @@ div.part-title-wrap > h3.part-number:before {
 .chapter-title-wrap .chapter-number,
 .chapter-title-wrap .chapter-title {
 	display: block;
-	text-transform: uppercase;
 }
 .chapter-title-wrap .chapter-title {
 	font-weight: normal;
+	font-style: italic;
 }
-.chapter-title-wrap .chapter-title:after {
-	content:""; 
-  height:1px;
-  border-bottom: 1px solid #000;
-  width:25%;
-  display:block;
-  margin: 0 auto;
-  margin-top: 20px;
-  
-}
+
 .chapter-title-wrap > .chapter-number {
     font-size: 1.3em;
 	font-weight: normal;
 	padding-right: 10px;
 	margin-bottom: 3em;
+	display: none;
 }
 
 
@@ -430,7 +430,7 @@ h2.chapter-subtitle {
 	margin-bottom: 2.8em;
     padding-top: 0.2em;	
 	text-align: center;
-	font-style: italic;
+	font-style: normal;
 	text-transform: capitalize;    
 }
 h2.chapter-author {
