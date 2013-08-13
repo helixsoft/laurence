@@ -469,16 +469,17 @@ div.back-matter {
 }
 
 div.part {
+  font-family: "Noto Serif", "Times New Roman", serif;
   background-repeat: no-repeat;
   background-position: bottom center;
-    margin-top: 2.5cm;  
+  margin-top: 2.5cm;  
   padding-bottom: 0.25em;
   padding: part;  
 }
  
 body {
-  font:  10pt/1.4 "Sorts Mill Goudy", serif;
-  font-weight: light;
+  font:  9pt/1.7 "Libre Baskerville", "Times New Roman", serif;
+  font-weight: lighter;
   }
 
 a {
@@ -488,7 +489,6 @@ a {
 }
 
 p {
-  line-height: 1.3;
   text-align: justify;
   margin-bottom: 0;
 }
@@ -506,9 +506,6 @@ p + ul {
   margin-top: 10px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  text-align: center;
-}
 hr {
   margin: 10px auto;
   text-align: center;
@@ -633,7 +630,7 @@ body > h1.title:first-child {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
-  font-size: 0.95em;
+  font-size: 1em;
   text-transform: uppercase;
   font-weight: bolder;
   font-family: "Noto Serif",serif;
@@ -660,6 +657,7 @@ body > h1.title:first-child {
   font-weight: 200;
   float: bottom;
   margin-bottom: 0;
+  letter-spacing: 1px;
   text-transform: uppercase;
  }
 #title-page > .publisher-city {
@@ -673,8 +671,8 @@ body > h1.title:first-child {
 #copyright-page {
     page-break-before: always;
     font-family: 'Open Sans', sans-serif;
-    margin-left: 3em;
-    margin-right: 3em;
+    margin-left: 1.5cm;
+    margin-right: 1.5cm;
 }
 
 
@@ -707,22 +705,17 @@ div.ugc h1, div.ugc h2, div.ugc h3, div.ugc h4, div.ugc h5, div.ugc h6 {
 }
 div.ugc h1,
 div.ugc h2,
-div.ugc h3 {
-   font-weight: normal;
- }
-div.ugc h1 {
-  font-size: 1.1em;
-}
-div.ugc h2,
-div.ugc h3 {
-  font-style: italic;
-  font-size: 1em;
-}
 div.ugc h3,
 div.ugc h4,
-div.ugc h5 {
+div.ugc h5,
+div.ugc h6,
+ {
+  font-family: "Noto Serif";
   text-align: left;
+  font-weight: bolder;
+  font-style: italic;
 }
+
 div.ugc h4 {
   font-size: 0.875em;
   font-style: italic;
@@ -843,7 +836,7 @@ span.chapter-author {
 
 
  /* REFERENCE PRESSBOOKS TABLE OF CONTENTS CSS
-======================= */
+======================= 
 #toc {
   page-break-before: right;
   counter-reset: part; 
@@ -900,6 +893,7 @@ span.chapter-author {
 #toc .part {
   margin: .5cm 0 0;
   font-weight: 600;
+  font-size: 1.2em;
 }
 #toc .part a::before {
   content: counter(part, upper-roman)". ";
@@ -945,9 +939,122 @@ span.chapter-author {
 #toc span.chapter-author {
   text-transform: uppercase;
   font-size: 0.8em;
+  font-weight: bolder;
+  position:relative;
+
+
+}
+
+/* TABLE OF CONTENTS FITZGERALD
+======================= */
+#toc {
+  page-break-before: right;
+  counter-reset: part; 
+  font-size: 9pt;
+  font-family: "Noto Serif", "Times New Roman", serif;
+}
+#toc h1 {
+  text-align: center;
   font-weight: bold;
+  font-style: italic;
+}
+#toc a {
+  border: none;
+  color: inherit; 
+}
+#toc ul, #toc li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#toc ul {
+  counter-reset: chapter;
+  line-height: 1.2em;
+}
+#toc li {
+  position: relative;
+}
+#toc .front-matter,
+#toc .back-matter {
+  margin-bottom: 3px;
+}
+#toc a::after {
+  content: leader(' ') target-counter(attr(href), page);
+  font-style: normal; 
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-decoration: none;
+}
+#toc .front-matter a::after {
+  content: leader(' ') target-counter(attr(href), page, lower-roman);
+}
+#toc .introduction a::after {
+  content: leader(' ') target-counter(attr(href), page);
+}
+#toc .part {
+  margin: .5cm 0 0;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+#toc .part a::before {
+  content: counter(part, upper-roman)". ";
+  counter-increment: part; 
+  margin-right: 1em;
+}
+#toc .part,
+#toc .chapter {
+  margin-left: 2em;
+}
+
+
+#toc .chapter a {
+  padding-left: 25px;
+}
+
+#toc .chapter {
+  margin-top: .2cm;
+}
+#toc .chapter a::before {
+  content: counter(chapter) ". ";
+  counter-increment: chapter; 
+  margin-right: 7pt;
+  position: absolute;
+  left: 0;
+  top: 0; 
+}
+#toc .part a::after {
+  content:'' ;
+}
+#toc span.toc-chapter-title {
+  display: inline-block;
+  width: 80%; 
+  font-style: italic;
+  font-weight: bolder;
+  margin-top: 1.3em;
+}
+#toc .chapter + .back-matter {
+  margin-top: 1.5em;
+} 
+
+#toc span.chapter-author,
+#toc span.chapter-subtitle {
+  display: inline-block;
+  margin-left: 2em;
+  text-indent: 0;
+  width: 75%;
+  position:relative;
+  
+
+}
+#toc span.chapter-author {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  font-weight: bolder;
   position:relative;
 }
+
+
 
 
 /* MOAR TRADITIONAL CSS
