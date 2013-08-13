@@ -594,13 +594,13 @@ body > h1.title:first-child {
     bookmark-level: none;
     font-size: 22pt;
     width: 140px;
-    margin-top: 6cm;
+    margin-top: 5.5cm;
     text-indent: 0;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     letter-spacing: 1px;
-    line-height: 48px;
+    line-height: 42px;
     font-family: "Noto Serif",serif;
     font-style: italic;
 }
@@ -621,11 +621,11 @@ body > h1.title:first-child {
 } 
 #title-page > .title{
   font-family: "Noto Serif", serif;
-  width: 160px;
+  width: 140px;
   margin-top: 6cm;
   margin-left:  auto;
   margin-right: auto;
-  line-height: 48px;
+  line-height: 42px;
   font-style: italic;
 }
 #title-page > .subtitle{
@@ -948,8 +948,24 @@ span.chapter-author {
   font-weight: bold;
   position:relative;
 }
-
-
+/* TOC EDIT SOME MORE TWEAKS
+==========================*/
+#toc h1{
+  margin-top: 20pt;
+}
+#toc .front-matter,
+#toc .back-matter ,
+#toc .chapter{
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+#toc .part{
+  margin-bottom: 1.3em;
+}
+#toc .chapter span.chapter-subtitle,
+#toc .chapter span.chapter-author{
+  margin-left: 20pt;
+}
 /* MOAR TRADITIONAL CSS
 ================== */
 
