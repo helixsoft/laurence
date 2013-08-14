@@ -976,7 +976,7 @@ span.chapter-author {
 }
 #toc .front-matter,
 #toc .back-matter {
-  margin-bottom: 3px;
+  margin-bottom: 2px;
 }
 #toc a::after {
   content: leader(' ') target-counter(attr(href), page);
@@ -993,9 +993,9 @@ span.chapter-author {
   content: leader(' ') target-counter(attr(href), page);
 }
 #toc .part {
-  margin: .5cm 0 0;
+  margin: 1em 0 0;
   font-weight: 600;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 #toc .part a::before {
   content: counter(part, upper-roman)". ";
@@ -1013,7 +1013,7 @@ span.chapter-author {
 }
 
 #toc .chapter {
-  margin-top: .2cm;
+  margin-top: 1em;
 }
 #toc .chapter a::before {
   content: counter(chapter) ". ";
@@ -1030,8 +1030,8 @@ span.chapter-author {
   display: inline-block;
   width: 80%; 
   font-style: italic;
-  font-weight: bolder;
-  margin-top: 1.3em;
+  font-weight: 600;
+  margin-top: 1.1em;
 }
 #toc .chapter + .back-matter {
   margin-top: 1.5em;
@@ -1070,7 +1070,7 @@ span.chapter-author {
 #toc span.chapter-author {
   font-size: 0.8em;
   text-transform: uppercase;
-  font-weight: bolder;
+  font-weight: 600;
   position:relative;
 }
 
@@ -1291,6 +1291,15 @@ img.aligncenter {
   font-style: italic;
   margin-top: 5px;
   text-align: left; 
+}
+
+.skinny-image {
+  float: top;
+  display: block;
+  max-height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1em;
 }
 
 /* BLOCKQUOTES
