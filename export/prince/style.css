@@ -1,20 +1,20 @@
 /*
 
- Name: Laurence PDF
-  Version: 1.0
-  Author: PressBooks (Book Oven Inc.)
-  Author URI: http://pressbooks.com
-  License: Creative Commons Attribution 2.0 Generic license
-  License URI: http://creativecommons.org/licenses/by/2.0/
-  Tags: basic, simple, serif fonts
-  Description: Named for English author Jane Austen, this is an traditional book theme, with serif fonts, that works well for fiction and simple-layout non-fiction.  
-  Copyright 2011-2013 Book Oven Inc. (PressBooks.com) support@pressbooks.com  
-  Reference documentation @see: http://www.princexml.com/doc/8.1/
+Name: Laurence PDF
+Version: 1.0
+Author: PressBooks (Book Oven Inc.)
+Author URI: http://pressbooks.com
+License: Creative Commons Attribution 2.0 Generic license
+License URI: http://creativecommons.org/licenses/by/2.0/
+Tags: basic, simple, serif fonts
+Description: Named for English author Jane Austen, this is an traditional book theme, with serif fonts, that works well for fiction and simple-layout non-fiction.
+Copyright 2011-2013 Book Oven Inc. (PressBooks.com) support@pressbooks.com
+Reference documentation @see: http://www.princexml.com/doc/8.1/
 ================== */
 
 
 /* FONTS
-===========	*/
+=========== */
 
 /* Header font */
 @font-face {
@@ -47,7 +47,7 @@
 
 @font-face {
   font-family: "Libre Baskerville";
-  src: url(../../fonts/LibreBaskerville-Regular.ttf) format("truetype");  
+  src: url(../../fonts/LibreBaskerville-Regular.ttf) format("truetype");
   font-style: normal;
   font-weight: normal;
 }
@@ -79,8 +79,8 @@ h1, h2, h3, h4, h5, h6 {
   size:6in 9in;
   margin: 2.5cm;
   font-size: 9.5pt;
-  orphans:3; 
-  widows:3;  
+  orphans:3;
+  widows:3;
 }
 
 
@@ -172,7 +172,7 @@ h1, h2, h3, h4, h5, h6 {
 @page chapter{
   @bottom {
   content: counter(page);
-  font-family: "Noto Serif", serif;  
+  font-family: "Noto Serif", serif;
   text-align: center;
   vertical-align: top;
   margin-bottom: 20px;
@@ -245,7 +245,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   @bottom {
   content: counter(page);
-  font-family: "Noto Serif", serif;  
+  font-family: "Noto Serif", serif;
   vertical-align: top;
   margin-bottom: 20px;
   margin-top: 25px;
@@ -257,7 +257,7 @@ h1, h2, h3, h4, h5, h6 {
 @page introduction{
   @bottom {
   content: counter(page);
-  font-family: "Noto Serif", serif;  
+  font-family: "Noto Serif", serif;
   text-align: center;
   vertical-align: top;
   margin-bottom: 20px;
@@ -412,7 +412,7 @@ h1, h2, h3, h4, h5, h6 {
 @page back-matter{
   @bottom {
   content: counter(page);
-  font-family: "Noto Serif", serif;  
+  font-family: "Noto Serif", serif;
   text-align: center;
   vertical-align: top;
   margin-bottom: 20px;
@@ -469,17 +469,16 @@ div.back-matter {
 }
 
 div.part {
-  font-family: "Noto Serif", "Times New Roman", serif;
   background-repeat: no-repeat;
   background-position: bottom center;
-  margin-top: 2.5cm;  
+  margin-top: 2.5cm;
   padding-bottom: 0.25em;
-  padding: part;  
+  padding: part;
 }
  
 body {
-  font:  9pt/1.7 "Libre Baskerville", "Times New Roman", serif;
-  font-weight: lighter;
+    font:  9pt/1.7 "Libre Baskerville", "Times New Roman", serif;
+    font-weight: lighter; 
   }
 
 a {
@@ -551,7 +550,7 @@ ul li li li::before {
   font-size: 0.5em;
   margin-right: 5px;
 }
-ol { 
+ol {
     list-style-type: none;
      counter-reset: level1;
 }
@@ -562,7 +561,7 @@ ol li::before {
 ol ol {
   list-style-type: none;
     counter-reset: level2;
-}   
+}
 ol li li::before {
   content: counter(level1) "." counter(level2) " ";
   counter-increment: level2;
@@ -591,20 +590,20 @@ body > h1.title:first-child {
     bookmark-level: none;
     font-size: 22pt;
     width: 140px;
-    margin-top: 6cm;
+    margin-top: 5.5cm;
     text-indent: 0;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     letter-spacing: 1px;
-    line-height: 48px;
+    line-height: 42px;
     font-family: "Noto Serif",serif;
     font-style: italic;
 }
 
 /* TITLE PAGE
 ================ */
-#title-page { 
+#title-page {
     page-break-before: right;
     height: 100%;
 }
@@ -615,15 +614,16 @@ body > h1.title:first-child {
 #title-page > .publisher,
 #title-page > .publisher-city {
   bookmark-level: none;
-} 
+}
 #title-page > .title{
   font-family: "Noto Serif", serif;
-  width: 160px;
+  width: 140px;
   margin-top: 6cm;
-  margin-left:  auto;
+  margin-left: auto;
   margin-right: auto;
-  line-height: 48px;
+  line-height: 42px;
   font-style: italic;
+  text-align: center;
 }
 #title-page > .subtitle{
   margin-top: 1cm;
@@ -634,6 +634,7 @@ body > h1.title:first-child {
   text-transform: uppercase;
   font-weight: bolder;
   font-family: "Noto Serif",serif;
+  text-align: center;
 }
 
 #title-page > div.logo {
@@ -649,30 +650,33 @@ body > h1.title:first-child {
  font-size: 0.85em;
   margin-top: 0.5cm;
   font-variant: small-caps;
+  text-align: center;
 
 }
 
 #title-page > .publisher {
   font-size: 10px;
-  font-weight: 200;
   float: bottom;
   margin-bottom: 0;
+  font-weight: 100;
   letter-spacing: 1px;
   text-transform: uppercase;
+  text-align: center;
  }
 #title-page > .publisher-city {
   font-size: 10px;
   float: bottom;
   margin-top: 10px;
   font-weight: 200;
+  text-align: center;
 }
 
 
 #copyright-page {
     page-break-before: always;
     font-family: 'Open Sans', sans-serif;
-    margin-left: 1.5cm;
-    margin-right: 1.5cm;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
 }
 
 
@@ -692,7 +696,7 @@ body > h1.title:first-child {
   font-style: italic;
   text-align: center;
 }
-/*   TITLES 
+/* TITLES
 =================== */
 h3.front-matter-number, h3.part-number, h3.chapter-number, h3.back-matter-number {
   bookmark-level: none;
@@ -708,14 +712,12 @@ div.ugc h2,
 div.ugc h3,
 div.ugc h4,
 div.ugc h5,
-div.ugc h6,
- {
+div.ugc h6 {
   font-family: "Noto Serif";
   text-align: left;
   font-weight: bolder;
   font-style: italic;
 }
-
 div.ugc h4 {
   font-size: 0.875em;
   font-style: italic;
@@ -739,9 +741,9 @@ div.back-matter > div.ugc h6.short-title:first-of-type {
   font-size: 0;
   height: 0;
 }
-div.front-matter .front-matter-title-wrap > h1:first-of-type, 
+div.front-matter .front-matter-title-wrap > h1:first-of-type,
 div.chapter .section-title-wrap > h2:first-of-type,
-div.back-matter .back-matter-title-wrap > h1:first-of-type  {
+div.back-matter .back-matter-title-wrap > h1:first-of-type {
   font-size: 15pt;
   string-set: section-title content();
   counter-reset: footnote;
@@ -751,98 +753,99 @@ div.front-matter.preface .front-matter-title-wrap > h1:first-of-type,
 #toc > h1:first-of-type {
   font-size: 15pt;
   margin-top: 2cm;
-  margin-bottom: 2.5cm; 
+  margin-bottom: 2.5cm;
 }
-.front-matter-title{
+.front-matter-title,.back-matter-title{
   font-family: "Noto Serif",serif;
   font-style: italic;
+  text-align: center;
 }
 
  /* OLD TABLE OF CONTENTS
-======================= 
+=======================
 
 .toc h1 {
-  text-align: center
+text-align: center
 }
 #toc a {
-  border: none;
+border: none;
 }
 #toc ul, #toc li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+list-style: none;
+margin: 0;
+padding: 0;
 }
 #toc a::after {
-  content: leader(' ') target-counter(attr(href), page);
-  font-style: normal;
-  float: right;
-  text-decoration: none;
+content: leader(' ') target-counter(attr(href), page);
+font-style: normal;
+float: right;
+text-decoration: none;
 }
 #toc .front-matter a::after {
-  content: leader(' ') target-counter(attr(href), page, lower-roman);
+content: leader(' ') target-counter(attr(href), page, lower-roman);
 }
 #toc .introduction a::after {
-  content: leader(' ') target-counter(attr(href), page);
+content: leader(' ') target-counter(attr(href), page);
 }
 #toc .part {
-  margin: .6cm 0 .4em;
-  text-align: center;
-  page-break-after: avoid;  
+margin: .6cm 0 .4em;
+text-align: center;
+page-break-after: avoid;
 }
 #toc {
-  page-break-before: right;
-  counter-reset: part; 
-  font-size: 10px;
+page-break-before: right;
+counter-reset: part;
+font-size: 10px;
 }
 #toc ul {
-  counter-reset: chapter;
-  line-height: 1.2em;
+counter-reset: chapter;
+line-height: 1.2em;
 }
 #toc .part a::before {
-  content: "Part "counter(part, upper-roman) ". ";
-  counter-increment: part; 
+content: "Part "counter(part, upper-roman) ". ";
+counter-increment: part;
 }
 #toc .front-matter,#toc .chapter,#toc .part,#toc .back-matter {
-  margin-bottom: 10px;
+margin-bottom: 10px;
 }
 
 #toc .chapter + .back-matter {
-  margin-top: 1.3em;
+margin-top: 1.3em;
 }
 #toc .front-matter,#toc .chapter,#toc .part,#toc .back-matter{
-  font-style: italic;
+font-style: italic;
 }
 #toc span.chapter-author,
 #toc span.chapter-subtitle {
-  display: inline-block;
-  font-style: italic;
-  width: 85%;
+display: inline-block;
+font-style: italic;
+width: 85%;
 }
 #toc span.chapter-author{
-  font-style: normal;
-  text-transform: uppercase;
+font-style: normal;
+text-transform: uppercase;
 }
 #toc span.chapter-author,
 #toc span.chapter-subtitle {
-  margin-bottom: 10px;
+margin-bottom: 10px;
 }
-#toc span.chapter-subtitle + 
+#toc span.chapter-subtitle +
 span.chapter-author {
-  margin-bottom: 10px;
-  position: relative;
-  top: -5px;
+margin-bottom: 10px;
+position: relative;
+top: -5px;
 }
 /*end toc*/
 
 
  /* REFERENCE PRESSBOOKS TABLE OF CONTENTS CSS
-======================= 
+======================= */
 #toc {
   page-break-before: right;
-  counter-reset: part; 
+  counter-reset: part;
   font-family: 'Noto Serif';
   font-size: 0.9em;
-} 
+}
 #toc h1 {
   text-align: center;
   font-weight: bold;
@@ -850,7 +853,7 @@ span.chapter-author {
 }
 #toc a {
   border: none;
-  color: inherit; 
+  color: inherit;
 }
 #toc ul, #toc li {
   list-style: none;
@@ -878,7 +881,7 @@ span.chapter-author {
 #toc a::after {
   content: leader(' ') target-counter(attr(href), page);
   font-style: italic;
-  font-weight: lighter; 
+  font-weight: lighter;
   position: absolute;
   top: 0;
   right: 0;
@@ -893,11 +896,10 @@ span.chapter-author {
 #toc .part {
   margin: .5cm 0 0;
   font-weight: 600;
-  font-size: 1.2em;
 }
 #toc .part a::before {
   content: counter(part, upper-roman)". ";
-  counter-increment: part; 
+  counter-increment: part;
   margin-right: 1em;
 }
 
@@ -911,11 +913,11 @@ span.chapter-author {
 }
 #toc .chapter a::before {
   content: counter(chapter) ". ";
-  counter-increment: chapter; 
+  counter-increment: chapter;
   margin-right: 7pt;
   position: absolute;
   left: 0;
-  top: 0; 
+  top: 0;
 }
 #toc .part a::after {
   content:'' ;
@@ -923,8 +925,8 @@ span.chapter-author {
 #toc span.toc-chapter-title {
   display: inline-block;
   font-style: italic;
-  font-weight:bold;
-  width: 70%; 
+  font-weight:600;
+  width: 70%;
 }
 #toc .chapter + .back-matter {
   margin-top: 1.3em;
@@ -939,117 +941,9 @@ span.chapter-author {
 #toc span.chapter-author {
   text-transform: uppercase;
   font-size: 0.8em;
-  font-weight: bolder;
-  position:relative;
-
-
-}
-
-/* TABLE OF CONTENTS FITZGERALD
-======================= */
-#toc {
-  page-break-before: right;
-  counter-reset: part; 
-  font-size: 9pt;
-  font-family: "Noto Serif", "Times New Roman", serif;
-}
-#toc h1 {
-  text-align: center;
-  font-weight: bold;
-  font-style: italic;
-}
-#toc a {
-  border: none;
-  color: inherit; 
-}
-#toc ul, #toc li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-#toc ul {
-  counter-reset: chapter;
-  line-height: 1.2em;
-}
-#toc li {
-  position: relative;
-}
-#toc .front-matter,
-#toc .back-matter {
-  margin-bottom: 2px;
-}
-#toc a::after {
-  content: leader(' ') target-counter(attr(href), page);
-  font-style: normal; 
-  position: absolute;
-  top: 0;
-  right: 0;
-  text-decoration: none;
-}
-#toc .front-matter a::after {
-  content: leader(' ') target-counter(attr(href), page, lower-roman);
-}
-#toc .introduction a::after {
-  content: leader(' ') target-counter(attr(href), page);
-}
-#toc .part {
-  margin: 1em 0 0;
   font-weight: 600;
-  font-size: 1.1em;
-}
-#toc .part a::before {
-  content: counter(part, upper-roman)". ";
-  counter-increment: part; 
-  margin-right: 1em;
-}
-#toc .part,
-#toc .chapter {
-  margin-left: 2em;
-}
-
-
-#toc .chapter a {
-  padding-left: 25px;
-}
-
-#toc .chapter {
-  margin-top: 1em;
-}
-#toc .chapter a::before {
-  content: counter(chapter) ". ";
-  counter-increment: chapter; 
-  margin-right: 7pt;
-  position: absolute;
-  left: 0;
-  top: 0; 
-}
-#toc .part a::after {
-  content:'' ;
-}
-#toc span.toc-chapter-title {
-  display: inline-block;
-  width: 80%; 
-  font-style: italic;
-  font-weight: 600;
-  margin-top: 1.1em;
-}
-#toc .chapter + .back-matter {
-  margin-top: 1.5em;
-} 
-
-#toc span.chapter-author,
-#toc span.chapter-subtitle {
-  display: inline-block;
-  margin-left: 2em;
-  text-indent: 0;
-  width: 75%;
   position:relative;
-  
-
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 /* TOC EDIT SOME MORE TWEAKS
 ==========================*/
 #toc h1{
@@ -1062,32 +956,17 @@ span.chapter-author {
   margin-top: 8px;
 }
 #toc .part{
+  margin: 1em 0 0;
+  font-size: 1.1em; 
   margin-bottom: 1.3em;
 }
+ #toc .chapter {
+  margin-top: 1em;
+ } 
 #toc .chapter span.chapter-subtitle,
 #toc .chapter span.chapter-author{
   margin-left: 20pt;
 }
-=======
-#toc span.chapter-author {
-  font-size: 0.8em;
-  text-transform: uppercase;
-  font-weight: 600;
-  position:relative;
-}
-
-
-
-
->>>>>>> 38adfc9925a56468f746cfb9cb012cd896802c67
-=======
-
-
->>>>>>> parent of 4d205e9... toc fix
-=======
-
-
->>>>>>> parent of 4d205e9... toc fix
 /* MOAR TRADITIONAL CSS
 ================== */
 
@@ -1121,7 +1000,7 @@ h3.chapter-number {
 }
 .aphorism cite {
     display: block;
-    font-size: 0.875em; 
+    font-size: 0.875em;
     font-style: normal;
     font-variant: small-caps;
     text-align: right;
@@ -1207,6 +1086,7 @@ h2.chapter-title,
 h2.chapter-subtitle,
 h2.chapter-author {
   font-family: 'Noto Serif';
+  text-align: center;
 }
 
 h2.chapter-title {
@@ -1226,7 +1106,7 @@ div.ugc h2.chapter-author {
 }
 div.ugc h2.chapter-subtitle {
     margin-bottom: 2.8em;
-    padding-top: 1em; 
+    padding-top: 1em;
 }
 div.ugc h2.chapter-author {
   font-size: 1.2em;
@@ -1300,20 +1180,11 @@ img.aligncenter {
   font-size: 0.875em;
   font-style: italic;
   margin-top: 5px;
-  text-align: left; 
-}
-
-.skinny-image {
-  float: top;
-  display: block;
-  max-height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 1em;
+  text-align: left;
 }
 
 /* BLOCKQUOTES
- =============== */
+=============== */
 div.blockquote {
   border-width: 0 4px;
   padding: 0 15%;
@@ -1330,31 +1201,31 @@ p.bl_indent {
 
 
 /* BIBLIOGRAPHY
- =============== */
+=============== */
 
-.bibliography p  {
+.bibliography p {
   padding-left: 14pt;
   text-indent: -14pt;
 }
 
-/* INDEX 
+/* INDEX
 ================== */
-.index .ugc  {
+.index .ugc {
   column-count: 2;
   column-gap: 2.5em;
   text-align: left;
 
 }
-.index .ugc  div {
+.index .ugc div {
   margin-bottom: 4em;
 }
-.index .ugc  p {
+.index .ugc p {
     font-size: 9pt;
   padding-left: 14pt;
   text-indent: -14pt;
   text-align: left;
 }
-.index .ugc  p.sub-entry {
+.index .ugc p.sub-entry {
   padding-left:30px;
 }
 
@@ -1377,9 +1248,9 @@ p.bl_indent {
   font-weight: normal;
 }
 .section-title::after{
-  content:""; 
+  content:"";
   height:1px;
-  background:#000; 
+  background:#000;
   width:25%;
   display:block;
   margin: 0 auto;
@@ -1400,4 +1271,11 @@ hr.break-symbols::after {
   text-align: center;
 }
 
-
+.skinny-image {
+  float: top;
+  display: block;
+  max-height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1em;
+} 
