@@ -101,7 +101,7 @@ h1, h2, h3, h4, h5, h6 {
 @page toc {
   @bottom {
   font-family: "Noto Serif", serif;
-  content: counter(page, lower-roman);
+  content: "";
   vertical-align: center;
   text-transform: lowercase;
   font-style: 10px;
@@ -590,7 +590,7 @@ body > h1.title:first-child {
     page-break-after: always;
     bookmark-level: none;
     font-size: 22pt;
-    width: 140px;
+    width: 160px;
     margin-top: 5.5cm;
     text-indent: 0;
     text-align: center;
@@ -618,7 +618,7 @@ body > h1.title:first-child {
 }
 #title-page > .title{
   font-family: "Noto Serif", serif;
-  width: 140px;
+  width: 160px;
   margin-top: 6cm;
   margin-left: auto;
   margin-right: auto;
