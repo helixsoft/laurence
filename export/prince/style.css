@@ -591,13 +591,13 @@ body > h1.title:first-child {
     bookmark-level: none;
     font-size: 22pt;
     width: 140px;
-    margin-top: 5.5cm;
+    margin-top: 6cm;
     text-indent: 0;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     letter-spacing: 1px;
-    line-height: 42px;
+    line-height: 48px;
     font-family: "Noto Serif",serif;
     font-style: italic;
 }
@@ -618,11 +618,11 @@ body > h1.title:first-child {
 } 
 #title-page > .title{
   font-family: "Noto Serif", serif;
-  width: 140px;
+  width: 160px;
   margin-top: 6cm;
   margin-left:  auto;
   margin-right: auto;
-  line-height: 42px;
+  line-height: 48px;
   font-style: italic;
 }
 #title-page > .subtitle{
@@ -1048,6 +1048,7 @@ span.chapter-author {
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* TOC EDIT SOME MORE TWEAKS
 ==========================*/
 #toc h1{
@@ -1078,6 +1079,10 @@ span.chapter-author {
 
 
 >>>>>>> 38adfc9925a56468f746cfb9cb012cd896802c67
+=======
+
+
+>>>>>>> parent of 4d205e9... toc fix
 /* MOAR TRADITIONAL CSS
 ================== */
 
