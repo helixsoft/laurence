@@ -581,7 +581,7 @@ cite {
 }
 .hanging-indent {
   padding-left: 1em;
-    text-indent: -1em;
+  text-indent: -1em;
 }
 /* HALFTITLE PAGE
 ==================== */
@@ -747,9 +747,10 @@ div.ugc h5 {
   font-weight: normal;
 }
 div.ugc h6 {
-  font-size: 0.8em;
+  font-size: 0.875em;
   font-weight: bold;
 }
+
 div.ugc h1 + p,
 div.ugc h2 + p,
 div.ugc h3 + p,
@@ -1047,9 +1048,10 @@ h3.chapter-number {
   position: footnote;
   counter-increment: footnote;
   footnote-style-position: inside;
-  margin-left: 0;
+  margin: 0 0 5px 5px;
+  padding-left: 10px;
+  text-indent: -10px; 
   line-height: 1.4;
-  text-indent: 1em;
   text-align: left;
 }
 sup.endnote {
@@ -1068,12 +1070,12 @@ sup.endnote {
 }
 .endnotes ol {
   font-size: 8pt;
-
   margin-top: 5px;
   margin-left: 0;
 }
 .endnotes li {
-  text-indent: 22pt;
+  padding-left: 10px;
+  text-indent: -10px; 
 }
 
 .endnotes p + p {
