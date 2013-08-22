@@ -127,7 +127,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size:10px;
   font-style: italic;
   font-weight: bold;
- 
+  text-transform: capitalize;
   }
 }
 @page chapter:right
@@ -212,7 +212,7 @@ h1, h2, h3, h4, h5, h6 {
   @top-left {
   font-family: "Noto Serif", serif;
   content: string(section-title);
-  font-variant:small-caps;
+  font-variant:normal;
   text-align: center;
   vertical-align: bottom;
   padding-bottom: 20px;
@@ -225,7 +225,7 @@ h1, h2, h3, h4, h5, h6 {
 @page introduction:right {
   @top-right {
   font-family: "Noto Serif", serif;
-  content: string(section-title);
+  content: string(book-title);
   font-variant:small-caps;
   text-align: center;
   vertical-align: bottom;
@@ -285,7 +285,7 @@ h1, h2, h3, h4, h5, h6 {
   {
   font-family: "Noto Serif", serif;
   content: string(section-title);
-  font-variant:small-caps;
+  font-variant:normal;
   text-align: center;
   vertical-align: bottom;
   padding-bottom: 20px;
@@ -714,9 +714,9 @@ div.ugc h3,
 div.ugc h4,
 div.ugc h5,
 div.ugc h6 {
-  font-family: "Noto Serif";
+  font-family: "Noto Serif","Georgia", "Times New Roman", serif;
   text-align: left;
-  font-weight: bolder;
+  font-weight: bold;
   font-style: italic;
 }
 div.ugc h4 {
@@ -1280,3 +1280,22 @@ hr.break-symbols::after {
   margin-right: auto;
   padding-bottom: 1em;
 } 
+
+.chapter-title-wrap .chapter-title{
+  text-align: center;
+  font-weight: bold;
+}
+.chapter-title-wrap .chapter-number{
+  text-align: center;
+  font-weight: bold;
+}
+
+.ugc.chapter-ugc .chapter-subtitle{
+  text-align: center;
+  font-weight: 400;
+}
+
+.ugc.chapter-ugc .chapter-author{
+  text-align: center;
+  text-align: bold;
+}
