@@ -119,11 +119,11 @@ h1, h2, h3, h4, h5, h6 {
   }
   @top-left {
   font-family: "Noto Serif", serif;
-  content: string(chapter-title);
+  content: string(section-title);
   text-align: center;
   margin-top: 125px;
   margin-bottom: 75px;
-  font-size:10px;
+  font-size:7pt;
   font-style: italic;
   font-weight: bold;
   text-transform: capitalize;
@@ -140,11 +140,12 @@ h1, h2, h3, h4, h5, h6 {
   {
   font-family: "Noto Serif", serif;
   content: string(book-title);
-  font-variant:small-caps;
+  text-transform: uppercase;
   text-align: center;
   margin-top: 125px;
   margin-bottom: 75px;
-  font-size:10px;
+  font-size: 7pt;
+  letter-spacing: 0.25px;
   font-style: normal;
   font-weight: bold;
   }
@@ -177,7 +178,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 20px;
   margin-top: 25px;
   width: 36px;
-  font-size:10px;
+  font-size: 8pt;
   font-style: italic;
   }
 }
@@ -225,7 +226,7 @@ h1, h2, h3, h4, h5, h6 {
   @top-right {
   font-family: "Noto Serif", serif;
   content: string(book-title);
-  font-variant:small-caps;
+  text-transform: uppercase;
   text-align: center;
   vertical-align: bottom;
   padding-bottom: 20px;
