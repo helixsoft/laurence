@@ -705,7 +705,6 @@ h3.front-matter-number, h3.part-number, h3.chapter-number, h3.back-matter-number
 
 div.ugc h1, div.ugc h2, div.ugc h3, div.ugc h4, div.ugc h5, div.ugc h6 {
   bookmark-level: none;
-  margin-bottom: 5px;
   page-break-after:avoid;
 }
 div.ugc h1,
@@ -716,16 +715,40 @@ div.ugc h5,
 div.ugc h6 {
   font-family: "Noto Serif","Georgia", "Times New Roman", serif;
   text-align: left;
-  font-weight: bold;
   font-style: italic;
+  line-height: 1.1em;
+  margin-bottom: 0;
+  padding-bottom: 5px;
+}
+
+div.ugc h1 {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+div.ugc h2 {
+  font-size: 1em;
+  font-weight: bold;
+}
+div.ugc h3 {
+  font-size: 1em;
+  font-weight: normal;
 }
 div.ugc h4 {
   font-size: 0.875em;
-  font-style: italic;
-  font-weight: normal;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: bold;
 }
 div.ugc h5 {
-  font-size: 0.75em;
+  font-size: 0.875em;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: normal;
+}
+div.ugc h6 {
+  font-size: 0.8em;
+  font-weight: bold;
 }
 div.ugc h1 + p,
 div.ugc h2 + p,
