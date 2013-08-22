@@ -768,6 +768,7 @@ div.back-matter > div.ugc h6.short-title:first-of-type {
 }
 div.front-matter .front-matter-title-wrap > h1:first-of-type,
 div.chapter .section-title-wrap > h2:first-of-type,
+div.chapter .chapter-title-wrap > h2:first-of-type,
 div.back-matter .back-matter-title-wrap > h1:first-of-type {
   font-size: 15pt;
   string-set: section-title content();
