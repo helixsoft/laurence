@@ -44,7 +44,6 @@ Reference documentation @see: http://www.princexml.com/doc/8.1/
  ;
 }
 
-
 @font-face {
   font-family: "Libre Baskerville";
   src: url(../../fonts/LibreBaskerville-Regular.ttf) format("truetype");
@@ -754,7 +753,8 @@ div.ugc h1 + p,
 div.ugc h2 + p,
 div.ugc h3 + p,
 div.ugc h4 + p,
-div.ugc h5 + p {
+div.ugc h5 + p 
+div.ugc h6 + p {
   margin-top: 0;
 }
 div.front-matter > div.ugc h6.short-title:first-of-type,
@@ -1116,6 +1116,10 @@ h2.chapter-author {
 h2.chapter-title {
     font-weight: bold;
     font-style: italic;
+    font-size: 1.6em;
+    margin-top: 2.5cm;
+    margin-bottom: 1em;
+    line-height: 1.1em;
 }
 
 h2.chapter-subtitle {
@@ -1124,7 +1128,7 @@ h2.chapter-subtitle {
 }
 div.ugc h2.chapter-subtitle,
 div.ugc h2.chapter-author {
-    font-size: 1.6em;
+    font-size: 1.3em;
     font-variant: normal;
     margin: -1.4em 0 3em;
 }
@@ -1134,9 +1138,10 @@ div.ugc h2.chapter-subtitle {
 }
 div.ugc h2.chapter-author {
   font-size: 1.2em;
+  margin-top: 2em;
   font-style: normal;
   font-variant: small-caps;
-  font-weight: bolder;
+  font-weight: 800;
 }
 .pullquote {
   border: 1px solid #000;
