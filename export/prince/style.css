@@ -539,8 +539,12 @@ hr.break-symbols::after {
   text-align: center;
 }
 table {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 0.8em;
   border: 1px solid #000;
   border-width: 1px 0;
+  margin: 1.5em;
+  page-break-inside: avoid;
 }
 dt {
     float: left;
