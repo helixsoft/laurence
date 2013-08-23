@@ -233,14 +233,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 @page introduction:right {
   @top-right {
-  font-family: "Noto Serif", serif;
+  font-family: "Alegreya SC", serif;
   content: string(book-title);
   text-transform: uppercase;
   text-align: center;
-  vertical-align: bottom;
-  padding-bottom: 20px;
-  padding-top: 20px;
+  margin-top: 125px;
+  margin-bottom: 75px;
   font-size: 7pt;
+  letter-spacing: 0.25px;
   font-style: normal;
   font-weight: bold;
   }
@@ -307,16 +307,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 @page front-matter:right {
   @top-right {
-  font-family: "Noto Serif", serif;
+  font-family: "Alegreya SC", serif;
   content: string(book-title);
+  text-transform: uppercase;
   text-align: center;
-  vertical-align: bottom;
-  padding-bottom: 20px;
-  padding-top: 20px;
+  margin-top: 125px;
+  margin-bottom: 75px;
   font-size: 7pt;
+  letter-spacing: 0.25px;
   font-style: normal;
   font-weight: bold;
-  text-transform: uppercase;
   }
 }
 @page front-matter:first {
@@ -385,22 +385,24 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 @page back-matter:right {
-   @top {
-    margin-top: 175px;
-    
+  @top {
+    margin-top: 175px; 
   }
-  @top-right
-  {
-  font-family: "Noto Serif", serif;
+  
+  @top-right {
+  font-family: "Alegreya SC", serif;
+  content: string(book-title);
+  text-transform: uppercase;
   text-align: center;
   margin-top: 125px;
   margin-bottom: 75px;
-  font-size:7pt;
+  font-size: 7pt;
+  letter-spacing: 0.25px;
   font-style: normal;
   font-weight: bold;
-  text-transform: uppercase;
   }
 }
+
 @page back-matter:first {
   @top-left {
   content: "";
@@ -673,37 +675,38 @@ body > h1.title:first-child {
 }
 
 #title-page > .publisher {
-  font-size: 0.8em;
+  font-size: 0.75em;
   float: bottom;
-  margin-bottom: -1cm;
-  letter-spacing: 1px;
+  margin-bottom: -0.25cm;
+  letter-spacing: 0.4px;
   text-transform: uppercase;
   font-weight: 100;
   text-align: center;
  }
 #title-page > .publisher-city {
-  font-size: 0.8em;
+  font-size: 0.75em;
   float: bottom;
   margin-top: 10px;
-  margin-bottom: -1cm;
+  margin-bottom: -1.25cm;
   font-weight: 100;
   text-align: center;
 }
 
 
 #copyright-page {
-    page-break-before: always;
-    font-family: 'Open Sans', sans-serif;
-    margin-left: 1cm;
-    margin-right: 1cm;
+  page-break-before: always;
+  font-family: 'Open Sans', sans-serif;
+  margin-left: 2cm;
+  margin-right: 2cm;
+
 }
 
-
 #copyright-page p {
-  font-size: 0.7em/1;
-  text-indent: 0;
-  text-align: center;
+  font-size: 8pt/1.1;
+
   hyphens: none;
+  text-align: center;
+  text-indent: 0;
   margin-bottom: 0.5em;
 }
 
@@ -905,6 +908,7 @@ div.back-matter .back-matter-title-wrap > h1:first-of-type {
 }
 #toc span.toc-chapter-title {
   display: inline-block;
+  font-size: 0.9em;
   font-style: italic;
   font-weight:600;
   width: 70%;
@@ -915,14 +919,18 @@ div.back-matter .back-matter-title-wrap > h1:first-of-type {
 #toc span.chapter-author,
 #toc span.chapter-subtitle {
   display: inline-block;
-  font-size: 0.8em;
   text-indent: 0;
   width: 70%;
 }
+
+#toc span.chapter-subtitle {
+   font-size: 0.8em;
+}
+
 #toc span.chapter-author {
+  font-family: "Alegreya SC", "Libre Baskerville", serif;
   text-transform: uppercase;
   font-size: 0.8em;
-  font-weight: 600;
   position:relative;
 }
 /* TOC EDIT SOME MORE TWEAKS
@@ -1047,17 +1055,17 @@ sup.endnote {
   text-indent: 0;
 }
 .textbox {
-  border: 1px solid #000;
+  border: 0.75px solid #000;
   margin: 10px 0;
   padding: 10px;
+  font-size: 0.9em;
+  line-height: 1.1em;
 }
 .textbox.shaded {
   background-color: #eee;
 }
 .textbox p {
   margin-top: 0;
-  font-size: 0.9em;
-  line-height: 1.1em;
 }
 .textbox-caption {
   display: block;
@@ -1224,6 +1232,7 @@ p.bl_indent {
   font-style: normal;
 }
 .section-title{
+
   text-transform: uppercase;
   font-size: 10pt;
   font-weight: normal;
