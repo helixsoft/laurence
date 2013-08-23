@@ -133,9 +133,7 @@ h1, h2, h3, h4, h5, h6 {
 {
   @top {
     margin-top: 175px;
-    
   }
-
   @top-right
   {
   font-family: "Noto Serif", serif;
@@ -165,7 +163,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 36px;
   margin-bottom: 20px;
   margin-top: 25px;
-  font-size:10px;
+  font-size:8pt;
   font-style: italic;
   }
 }
@@ -212,12 +210,11 @@ h1, h2, h3, h4, h5, h6 {
   @top-left {
   font-family: "Noto Serif", serif;
   content: string(section-title);
-  font-variant:normal;
   text-align: center;
   vertical-align: bottom;
   padding-bottom: 20px;
   padding-top: 20px;
-  font-size:10px;
+  font-size:7pt;
   font-style: italic;
   text-transform: capitalize;
   }
@@ -231,7 +228,7 @@ h1, h2, h3, h4, h5, h6 {
   vertical-align: bottom;
   padding-bottom: 20px;
   padding-top: 20px;
-  font-size:10px;
+  font-size: 7pt;
   font-style: normal;
   }
 }
@@ -249,7 +246,7 @@ h1, h2, h3, h4, h5, h6 {
   vertical-align: top;
   margin-bottom: 20px;
   margin-top: 25px;
-  font-size:10px;
+  font-size:8pt;
   font-style: italic;
   }
   
@@ -263,7 +260,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 20px;
   margin-top: 25px;
   width: 36px;
-  font-size:10px;
+  font-size:8pt;
   font-style: italic;
   }
 }
@@ -285,12 +282,11 @@ h1, h2, h3, h4, h5, h6 {
   {
   font-family: "Noto Serif", serif;
   content: string(section-title);
-  font-variant:normal;
   text-align: center;
   vertical-align: bottom;
   padding-bottom: 20px;
   padding-top: 20px;
-  font-size:10px;
+  font-size:7pt;
   font-style: italic;
   text-transform: capitalize;
   }
@@ -299,11 +295,13 @@ h1, h2, h3, h4, h5, h6 {
   @top-right {
   font-family: "Noto Serif", serif;
   content: string(book-title);
-  font-variant:small-caps;
   text-align: center;
   vertical-align: bottom;
   padding-bottom: 20px;
   padding-top: 20px;
+  font-size: 7pt;
+  font-style: normal;
+  text-transform: uppercase;
   }
 }
 @page front-matter:first {
@@ -321,7 +319,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 25px;
   width: 36px;
   text-transform: lowercase;
-  font-size:10px;
+  font-size:8pt;
   font-style: italic;
   }
 }
@@ -334,9 +332,8 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 20px;
     margin-top: 25px;
     width: 36px;
-    text-transform: lowercase;
-    font-size:10px;
-  font-style: italic;
+    font-size:8pt;
+    font-style: italic;
   }
 }
 @page front-matter:blank {
@@ -363,11 +360,10 @@ h1, h2, h3, h4, h5, h6 {
   @top-left {
   font-family: "Noto Serif", serif;
   content: string(section-title);
-  font-variant:small-caps;
   text-align: center;
   margin-top: 125px;
   margin-bottom: 75px;
-  font-size:10px;
+  font-size:7pt;
   font-style: italic;
   text-transform: capitalize;
   }
@@ -380,13 +376,12 @@ h1, h2, h3, h4, h5, h6 {
   @top-right
   {
   font-family: "Noto Serif", serif;
-  content: string(book-title);
-  font-variant:small-caps;
   text-align: center;
   margin-top: 125px;
   margin-bottom: 75px;
-  font-size:10px;
+  font-size:7pt;
   font-style: normal;
+  text-transform: uppercase;
   }
 }
 @page back-matter:first {
@@ -404,7 +399,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 36px;
   margin-bottom: 20px;
   margin-top: 25px;
-  font-size:10px;
+  font-size:8pt;
   font-style: italic;
   
   }
@@ -418,7 +413,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 20px;
   margin-top: 25px;
   width: 36px;
-  font-size:10px;
+  font-size:8pt;
   font-style: italic;
   }
 }
@@ -787,8 +782,13 @@ div.front-matter.preface .front-matter-title-wrap > h1:first-of-type,
   font-style: italic;
   text-align: center;
 }
-
+div.front-matter .front-matter-title-wrap > h1:first-of-type,
+div.back-matter .back-matter-title-wrap > h1:first-of-type {
+  margin-top: 2cm;
+  margin-bottom: 2.5cm;
+}
  /* OLD TABLE OF CONTENTS
+}
 =======================
 
 .toc h1 {
@@ -1330,4 +1330,8 @@ hr.break-symbols::after {
 .ugc.chapter-ugc .chapter-author{
   text-align: center;
   text-align: bold;
+}
+
+h1.part-title{
+ line-height: 50pt; 
 }
