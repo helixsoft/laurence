@@ -1319,6 +1319,10 @@ sup.endnote {
 
 /* ENDNOTES
 ================== */
+.endnotes{
+  margin-left: 0px;
+  padding-left: 0px;
+}
 .endnotes hr {
   border: none;
   margin-top: 1cm;
@@ -1327,15 +1331,16 @@ sup.endnote {
   margin-bottom: 0;
 }
 .endnotes ol {
-  font-size: 8pt;
-
+  font-size: 0.875em;
+  padding-left: 0em;
   margin-top: 5px;
   margin-left: 0;
 }
 .endnotes li {
-  text-indent: 22pt;
+  text-indent: 0pt;
+  margin-top: 5px;
+  text-align: justify;
 }
-
-.endnotes p + p {
-  text-indent: 0;
+.endnotes p{
+  text-indent: 1em;
 }
