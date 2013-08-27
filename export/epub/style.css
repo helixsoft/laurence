@@ -15,7 +15,7 @@ This file must validate as CSS 2.01 with absolutely no errors
 */
 
 body {
-	font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, Times, serif;
+	font-family: "Georgia", "Palatino", "Times New Roman", serif;
 	line-height: 1.5em;
 	padding: 1em;
 }	 
@@ -155,30 +155,35 @@ p.bl_indent {
 	margin-top: 10%;
 	margin-left: auto;
 	margin-right: auto;
-	width: 180px;
+	width: 220px;
 	font-style: italic;
+	line-height: 44px;
 }
 #title-page > .subtitle {
-	font-size: 1.2em;
-	margin-top: 1em;
+	font-size: 1em;
+	margin-top: 2cm;
 	text-transform: uppercase;
 	width: 340px;
 	margin-left: auto;
 	margin-right: auto;
+	font-weight: bold;
 }
 #title-page > .author {
-	font-size: 1em;
-	font-weight: normal;
-	margin-top: 6em;	
-}
-#title-page > .publisher {
 	font-size: 0.875em;
 	font-weight: normal;
+	margin-top: 6em;
+	font-weight: bold;	
+}
+#title-page > .publisher {
+	font-size: 0.8em;
+	font-weight: normal;
 	margin-top: 12em;
+	margin-bottom: 10px;
+	text-transform: uppercase;
 }
 #title-page > .publisher-city {
 	text-transform: capitalize;
-	font-size: 0.875em;
+	font-size: 0.8em;
 	font-weight: normal;
 	margin-top: 0;
 }
@@ -277,6 +282,7 @@ p.bl_indent {
 }
 .front-matter-number,
 .front-matter-title,
+.back-matter-title,
 #toc > h1 {
     font-size: 1.7em;
 	margin:1em 0 3em;
@@ -315,7 +321,6 @@ div.part-title-wrap > h3.part-number:before {
 	font-weight: normal;
 	padding-right: 10px;
 	margin-bottom: 3em;
-	display: none;
 }
 
 
@@ -325,6 +330,7 @@ div.part-title-wrap > h3.part-number:before {
 #toc {
 	font-size: 1em;
 	text-align: left;
+	font-style: italic;
 }
 #toc ul > .front-matter,
 #toc ul > .back-matter {
@@ -365,7 +371,6 @@ div.part-title-wrap > h3.part-number:before {
 #toc span.chapter-author,
 #toc span.chapter-subtitle {
 	display: block;
-	font-style: italic;
 	margin-left: 1em;
 }
 #toc span.chapter-author,
@@ -376,6 +381,23 @@ div.part-title-wrap > h3.part-number:before {
 span.chapter-author {
 	margin-top: -5px;
 	margin-bottom: 5px;
+}
+#toc span.chapter-subtitle {
+	font-style: normal;
+	font-weight: normal;
+}
+#toc span.chapter-author{
+	font-style: normal;
+	text-transform: uppercase;
+}
+#toc li span.chapter-author{
+	font-size: 12px;
+}
+#toc li.front-matter,
+#toc li.part,
+#toc li.chapter,
+#toc li.back-matter{
+	margin-bottom: 1em;
 }
 
 /* IMAGES
@@ -431,7 +453,6 @@ h2.chapter-subtitle {
     padding-top: 0.2em;	
 	text-align: center;
 	font-style: normal;
-	text-transform: capitalize;    
 }
 h2.chapter-author {
 	font-style: normal;
@@ -525,7 +546,7 @@ aside {
 .footnotes {
 	display: block;	
     font-size: 0.875em;
-    margin: 20px 10px 40px 40px;
+    margin: 20px 10px 40px 0px;
 }
 .footnotes-wrap {
 	list-style: none;
@@ -586,4 +607,15 @@ aside {
 .index .ugc  p.sub-entry {
 	padding-left:30px;
 }
- 
+.part .part-number,
+.part .part-title{
+	text-align: left;
+}
+h2.chapter-author{
+	text-transform: uppercase;
+}
+.wp-caption-text{
+	margin: 0 auto;
+    text-align: left;
+    width: 250px;
+}
