@@ -342,8 +342,9 @@ div.part-title-wrap > h3.part-number:before {
 
 
 
-/* TABLE OF CONTENT 
- ===================== */
+/* OLD TABLE OF CONTENT 
+ ===================== 
+
 #toc {
 	font-size: 1em;
 	text-align: left;
@@ -407,6 +408,8 @@ span.chapter-author {
 }
 #toc span.chapter-author{
 	font-style: normal;
+	font-weight: bold;
+	font-size: 0.8em;
 	text-transform: uppercase;
 }
 #toc li span.chapter-author{
@@ -420,6 +423,102 @@ span.chapter-author {
 	margin-bottom: 1em;
 	font-weight: normal;
 }
+
+/* NEW TABLE OF CONTENT 
+ ===================== */
+
+#toc {
+	text-align: left;
+}
+#toc ul > .front-matter,
+#toc ul > .back-matter {
+	font-style: italic;
+}
+#toc .part,
+#toc .front-matter + .chapter {
+	margin-top: 1.3em;
+}
+#toc a {
+	border: none;
+	color: #000;
+}
+#toc ul, #toc li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#toc ul {
+	line-height: 1.2em;
+}
+#toc a:after {
+  font-style: normal;
+  text-decoration: none;
+}
+#toc .part {
+	margin: 1em 0 0.4em;
+	font-size: 1.1em;
+	font-weight: bold;
+	font-style: normal;
+}
+#toc .chapter {
+	margin-right: 0.75em;
+	font-size: 0.9em;
+	font-style: italic;	
+}
+
+#toc .chapter + .back-matter {
+	margin-top: 1.3em;
+}
+
+#toc span.chapter-subtitle {
+	display: block;
+	font-size: 0.8em;
+	margin-left: 1em;
+	margin-bottom: 5px;
+	font-style: normal;
+	font-weight: normal;
+	margin-left: 1.5em;
+}
+
+#toc li span.chapter-author {	
+	margin-left: 1.5em;
+}
+
+#toc span.chapter-author{
+	font-style: normal;
+	font-weight: bold;
+	font-size: 0.75em;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+	display: block;
+	margin-left: 1.5em;
+}
+
+#toc span.chapter-subtitle + 
+span.chapter-author {
+	margin-top: -5px;
+	margin-bottom: 5px;
+
+}
+
+#toc li.front-matter {
+	margin-bottom: 0.25em;
+	font-size: 0.85em;
+}
+
+#toc li.part {
+     margin-bottom: 0.5em;
+
+}
+#toc li.chapter {
+	margin-bottom: 1em;
+}
+
+#toc li.back-matter{
+	margin-bottom: 0.25em;
+	font-size: 0.85em;
+}
+
 
 /* IMAGES
 ================== */
@@ -469,7 +568,8 @@ div.wp-caption.alignnone {
 /* SUBTITLES, CHAPTER AUTHOR & APHORIMS
 ======================================== */
 h2.chapter-subtitle {
-	font-weight: normal !important;
+	font-weight: normal;
+	font-size: 1.2em;
 	margin-bottom: 2.8em;
     padding-top: 0.2em;	
 	text-align: center;
@@ -481,7 +581,7 @@ h2.chapter-author {
 }
 h2.chapter-subtitle,
 h2.chapter-author {
-    font-size: 1.358em !important;
+    font-size: 1.3em !important;
     font-variant: normal;
     margin: 0em 0 3em;
 }
