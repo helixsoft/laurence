@@ -214,42 +214,55 @@ p.bl_indent {
 	margin-bottom: 1em;
 	page-break-after:avoid;	
 }
+
 .ugc.back-matter-ugc h1,
 .ugc.part-ugc h1,
 .ugc.chapter-ugc h1,
 .ugc.front-matter-ugc h1 {
 	font-size: 1.2em;
+	font-weight: bold;
+	font-style: italic;
 }
 .ugc.back-matter-ugc h2,
 .ugc.part-ugc h2,
 .ugc.chapter-ugc h2,
 .ugc.front-matter-ugc h2 {
-	font-size: 1.1em;
-	font-weight: normal;
+	font-size: 1em;
+	font-weight: bold;
+	font-style: italic;
 }
 .ugc.back-matter-ugc h3,
 .ugc.part-ugc h3,
 .ugc.chapter-ugc h3,
 .ugc.front-matter-ugc h3 {
-	font-size: 0.75em;
+	font-size: 1em;
 	font-weight: normal;
-	margin-left: 2em;
-	text-transform: uppercase;
+	margin-left: 0em;
+	font-style: italic;
 }
 .ugc.back-matter-ugc h4,
 .ugc.part-ugc h4,
 .ugc.chapter-ugc h4,
 .ugc.front-matter-ugc h4 {
-	font-size: 0.75em;
-	font-weight: normal;
+	font-size: 0.875em;
+	font-weight: bold;
 	text-transform: uppercase;
 }
 .ugc.back-matter-ugc h5,
 .ugc.part-ugc h5,
 .ugc.chapter-ugc h5,
 .ugc.front-matter-ugc h5 {
-	font-size: 1em;
-	margin-left: 2em;	
+	font-size: 0.875em;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+.ugc.back-matter-ugc h6,
+.ugc.part-ugc h6,
+.ugc.chapter-ugc h6,
+.ugc.front-matter-ugc h6 {
+	font-size: 0.875em;
+	font-weight: bold;
+	font-style: italic;
 }
 .ugc h1 + p,
 .ugc h2 + p,
@@ -314,6 +327,7 @@ div.part-title-wrap > h3.part-number:before {
 .chapter-title-wrap .chapter-title {
 	font-weight: normal;
 	font-style: italic;
+	font-weight: bold;
 }
 
 .chapter-title-wrap > .chapter-number {
@@ -321,6 +335,7 @@ div.part-title-wrap > h3.part-number:before {
 	font-weight: normal;
 	padding-right: 10px;
 	margin-bottom: 3em;
+	font-weight: bold;
 }
 
 
@@ -385,19 +400,22 @@ span.chapter-author {
 #toc span.chapter-subtitle {
 	font-style: normal;
 	font-weight: normal;
+	margin-left: 1.3em;
 }
 #toc span.chapter-author{
 	font-style: normal;
 	text-transform: uppercase;
 }
 #toc li span.chapter-author{
-	font-size: 12px;
+	font-size: 12pt !important;
+	margin-left: 1.5em;
 }
 #toc li.front-matter,
 #toc li.part,
 #toc li.chapter,
 #toc li.back-matter{
 	margin-bottom: 1em;
+	font-weight: bold;
 }
 
 /* IMAGES
@@ -448,11 +466,11 @@ div.wp-caption.alignnone {
 /* SUBTITLES, CHAPTER AUTHOR & APHORIMS
 ======================================== */
 h2.chapter-subtitle {
-	font-weight: normal;
+	font-weight: normal !important;
 	margin-bottom: 2.8em;
     padding-top: 0.2em;	
 	text-align: center;
-	font-style: normal;
+	font-style: normal !important;
 }
 h2.chapter-author {
 	font-style: normal;
@@ -460,11 +478,17 @@ h2.chapter-author {
 }
 h2.chapter-subtitle,
 h2.chapter-author {
-    font-size: 1.1em;
+    font-size: 1.358em !important;
     font-variant: normal;
     margin: 0em 0 3em;
 }
-
+h2.chapter-author {
+    font-size: 1.1em !important;
+    font-variant: normal;
+    text-transform: uppercase;
+    font-style: normal !important;
+    font-weight: bold !important;
+}
 h2.chapter-subtitle + h2.chapter-author {
 	margin-top: -2em;
 }
@@ -619,3 +643,4 @@ h2.chapter-author{
     text-align: left;
     width: 250px;
 }
+
