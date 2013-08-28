@@ -155,15 +155,15 @@ p.bl_indent {
 	margin-top: 10%;
 	margin-left: auto;
 	margin-right: auto;
-	width: 220px;
+	width: 50%;
 	font-style: italic;
 	line-height: 44px;
 }
 #title-page > .subtitle {
 	font-size: 1em;
 	margin-top: 2cm;
-	text-transform: uppercase;
-	width: 340px;
+	font-variant: small-caps;
+	width: 60%;
 	margin-left: auto;
 	margin-right: auto;
 	font-weight: bold;
@@ -171,20 +171,20 @@ p.bl_indent {
 #title-page > .author {
 	font-size: 0.875em;
 	font-weight: normal;
-	margin-top: 6em;
+	font-variant: small-caps;
+	margin-top: 5em;
 	font-weight: bold;	
 }
 #title-page > .publisher {
 	font-size: 0.8em;
-	font-weight: normal;
-	margin-top: 12em;
+	font-weight: lighter;
+	margin-top: 7em;
 	margin-bottom: 10px;
 	text-transform: uppercase;
 }
 #title-page > .publisher-city {
-	text-transform: capitalize;
 	font-size: 0.8em;
-	font-weight: normal;
+	font-weight: lighter;
 	margin-top: 0;
 }
 
@@ -197,6 +197,7 @@ p.bl_indent {
 /* COPYRIGHT PAGE
 =================== */
 #copyright-page > div.ugc p {
+	font-family: "Arial", "Helvetica", sans-serif;
 	font-size: 0.7em;
     text-indent: 0;
     margin-bottom: 0.5em;
@@ -211,7 +212,7 @@ p.bl_indent {
 .ugc h4, 
 .ugc h5, 
 .ugc h6 {
-	margin-bottom: 1em;
+	margin-bottom: 0.5em;
 	page-break-after:avoid;	
 }
 
@@ -308,7 +309,7 @@ p.bl_indent {
 	
 }
 div.part-title-wrap > h3.part-number:before {
-	content: "part ";
+	content: "Part ";
 	text-transform: uppercase;
 
 }
@@ -382,6 +383,7 @@ div.part-title-wrap > h3.part-number:before {
 }
 #toc .chapter + .back-matter {
 	margin-top: 1.3em;
+	font-style: normal;
 }
 #toc span.chapter-author,
 #toc span.chapter-subtitle {
@@ -415,7 +417,7 @@ span.chapter-author {
 #toc li.chapter,
 #toc li.back-matter{
 	margin-bottom: 1em;
-	font-weight: bold;
+	font-weight: normal;
 }
 
 /* IMAGES
