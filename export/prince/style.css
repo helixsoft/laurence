@@ -4,8 +4,6 @@ Name: Laurence PDF
 Version: 1.0
 Author: PressBooks (Book Oven Inc.)
 Author URI: http://pressbooks.com
-License: Creative Commons Attribution 2.0 Generic license
-License URI: http://creativecommons.org/licenses/by/2.0/
 Tags: basic, simple, serif fonts
 Description: Named for English author Jane Austen, this is an traditional book theme, with serif fonts, that works well for fiction and simple-layout non-fiction.
 Copyright 2011-2013 Book Oven Inc. (PressBooks.com) support@pressbooks.com
@@ -45,8 +43,6 @@ Reference documentation @see: http://www.princexml.com/doc/8.1/
 }
 
 
-
-
 @font-face {
   font-family: 'Open Sans';
   font-weight: light;
@@ -78,8 +74,6 @@ Reference documentation @see: http://www.princexml.com/doc/8.1/
 
 
 
-
-/* DUMMY CONTENT TO COMMIT USING GITHUB CLINET */
 /* Override hierarchy. See: http://www.princexml.com/doc/8.1/pdf-bookmarks */
 h1, h2, h3, h4, h5, h6 {
   prince-bookmark-level: 1;
@@ -482,6 +476,7 @@ div.back-matter {
   prince-page-group: start;
 }
 
+
 div.part {
   background-repeat: no-repeat;
   background-position: bottom center;
@@ -489,7 +484,7 @@ div.part {
   padding-bottom: 0.25em;
   padding: part;
 }
- 
+
 body {
      font-family: "Libre Baskerville", "Georgia", "Times New Roman", serif;
      font-size: 8.5pt;
@@ -538,6 +533,22 @@ hr.break-symbols::after {
   font-size: 10pt;
   text-align: center;
 }
+
+h3.section_break {
+  text-align: center;
+  text-indent: 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+h3.page_break {
+  text-align: center;
+  text-indent: 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  page-break-after: always;
+}
+
 table {
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 0.8em;
@@ -706,11 +717,13 @@ body > h1.title:first-child {
 }
 
 #copyright-page p {
-  font-size: 8pt/1.1;
-
+  font-size: 0.9em;
+  line-height: 1.2em;
   hyphens: none;
   text-align: center;
   text-indent: 0;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-bottom: 0.5em;
 }
 
@@ -725,6 +738,7 @@ body > h1.title:first-child {
   font-style: italic;
   text-align: center;
 }
+
 /* TITLES
 =================== */
 h3.front-matter-number, h3.part-number, h3.chapter-number, h3.back-matter-number {
@@ -807,6 +821,7 @@ div.back-matter .back-matter-title-wrap > h1:first-of-type {
   string-set: section-title content();
   counter-reset: footnote;
   margin-bottom: 20pt;
+
 }
 div.front-matter.preface .front-matter-title-wrap > h1:first-of-type,
 #toc > h1:first-of-type {
@@ -814,7 +829,7 @@ div.front-matter.preface .front-matter-title-wrap > h1:first-of-type,
   margin-top: 2cm;
   margin-bottom: 2.5cm;
 }
-.front-matter-title,.back-matter-title{
+.front-matter-title,.back-matter-title {
   font-family: "Noto Serif",serif;
   font-style: italic;
   text-align: center;
@@ -881,13 +896,19 @@ div.back-matter .back-matter-title-wrap > h1:first-of-type {
 #toc .introduction a::after {
   content: leader(' ') target-counter(attr(href), page);
 }
+
+
 #toc .part {
   margin: .5cm 0 0;
   font-weight: 600;
+  line-height: 1.2em;
 }
+
+
+
 #toc .part a::before {
   content: counter(part, upper-roman)". ";
-  counter-increment: part;
+  counter-increment: part; 
   margin-right: 1em;
 }
 
@@ -983,6 +1004,8 @@ h3.part-number::before {
   content: "Part ";
 }
 h3.chapter-number {
+  font-weight: normal;
+  font-style: italic;
   margin-bottom: 3em;
 }
 .aphorism {
@@ -1059,11 +1082,12 @@ sup.endnote {
   text-indent: 0;
 }
 .textbox {
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
   border: 0.75px solid #000;
   margin: 10px 0;
   padding: 10px;
   font-size: 0.9em;
-  line-height: 1.1em;
+  line-height: 1.2em;
 }
 .textbox.shaded {
   background-color: #eee;
@@ -1090,7 +1114,7 @@ h2.chapter-title {
     font-style: italic;
     font-size: 1.6em;
     margin-top: 2.5cm;
-    margin-bottom: 1em;
+    margin-bottom: 2.5cm;
     line-height: 1.1em;
 }
 
@@ -1265,6 +1289,21 @@ hr.break-symbols::after {
   text-align: center;
 }
 
+div.ugc > h3.section_break {
+  text-align: center;
+  text-indent: 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+div.ugc > h3.page_break {
+  text-align: center;
+  text-indent: 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  page-break-after: always;
+}
+
 .skinny-image {
   float: top;
   display: block;
@@ -1280,7 +1319,6 @@ hr.break-symbols::after {
 }
 .chapter-title-wrap .chapter-number{
   text-align: center;
-  font-weight: bold;
 }
 
 .ugc.chapter-ugc .chapter-subtitle{
@@ -1344,3 +1382,29 @@ sup.endnote {
 .endnotes p{
   text-indent: 1em;
 }
+
+/* SPECIAL PAGES */
+
+
+@page dark_background_page { 
+    background-color: #BDBDBD;
+}
+
+div.dark_background { 
+  page: dark_background_page; 
+}
+
+
+@page dark_background_border_page { 
+    background-color: #BDBDBD;
+    border-style: double;
+    border-width: 3px;
+    border-color: #F2F2F2;
+    margin: 1.5cm 1.5cm 1.5cm 1.5cm;
+    padding: 0.5em;
+}
+
+div.dark_background_border { 
+  page: dark_background_border_page; 
+}
+
