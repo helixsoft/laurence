@@ -7,50 +7,270 @@ This file must validate as CSS 2.01 with absolutely no errors
   Version: 1.0
   Author: PressBooks (Book Oven Inc.)
   Author URI: http://pressbooks.com
-  License: Creative Commons Attribution 2.0 Generic license
-  License URI: http://creativecommons.org/licenses/by/2.0/
   Tags: basic, simple, serif fonts, paragraph-indents
-  Description: A basic, simple ePub style, with paragraph indents.
   Copyright 2011-2012 Book Oven Inc. (PressBooks.com) support@pressbooks.com  
 */
 
+
+
+/* GENERAL DEFAULT STYLES 
+=========================*/
+
 body {
-	font-family: "Georgia", "Palatino", "Times New Roman", serif;
+	font-family: "Georgia", "Baskerville", "Palatino", Times, "Times New Roman", serif;
 	line-height: 1.5em;
-	padding: 1em;
+	font-style: normal;
+	font-weight: lighter;
 }	 
+
 a {
 	color: #00e;
 	text-decoration: none;
 }
 
-/* 
-	 HEADERS
- =============== */
+/*  BODY HEADERS */
+
 h1, h2, h3, h4, h5, h6 {
-	line-height: 1.4em;
+	font-family: "Palatino", "Baskerville", "Georgia", Times, "Times New Roman", serif;
+	line-height: 1.3em;
+	margin-top: 1.2em;
+	margin-bottom: 0.3em;
+	text-indent: 0;
+	hyphens: none;
+	page-break-after:avoid;	
+}
+	
+div.ugc h1 {
+	font-size: 1.2em;
+	font-weight: bold;
+	font-style: italic;
+	hyphens: none;
+	page-break-after:avoid;	
+}
+
+div.ugc h2 {
+	font-size: 1em;
+	font-weight: bold;
+	font-style: italic;
+	margin-bottom: 0.3em;
+	margin-top: 1.2em;
+	hyphens: none;
+	page-break-after:avoid;	
+}
+
+div.ugc h3 {
+	font-size: 1em;
+	font-weight: normal;
+	margin-left: 0em;
+	font-style: italic;
+	margin-bottom: 0.3em;
+	margin-top: 1.2em;
+	hyphens: none;
+	page-break-after:avoid;	
+}
+
+div.ugc h4 {
+	font-size: 0.875em;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 0.3em;
+	margin-top: 1.2em;
+	hyphens: none;
+	page-break-after:avoid;	
+}
+
+div.ugc h5 {
+	font-size: 0.875em;
+	font-weight: normal;
+	text-transform: uppercase;
+	margin-bottom: 0.3em;
+	margin-top: 1.2em;
+	hyphens: none;
+	page-break-after:avoid;	
+}
+
+div.ugc h6 {
+	font-size: 0.875em;
+	font-weight: bold;
+	font-style: italic;
+	margin-bottom: 0.3em;
+	margin-top: 1.2em;
+	hyphens: none;
+    page-break-after:avoid;	
+}
+
+.ugc h1 + p,
+.ugc h2 + p,
+.ugc h3 + p,
+.ugc h4 + p,
+.ugc h5 + p, 
+.ugc h6 + p {
+	margin-top: 0;
 }
 
 
-/*  DEFAULT STYLES 
- =================== */
+/* PARAGRAPHS */
+
+div.ugc p {
+	margin: 0;
+    font-family: "Georgia", "Palatino", "Times New Roman", serif;
+    font-size: 1em;
+	line-height: 1.5em;
+	font-style: normal;
+	font-weight: normal;	
+	text-align: left; 
+}
+
 p {
 	margin: 0;
+    font-family: "Georgia", "Palatino", "Times New Roman", serif;
+    font-size: 1em;
+	line-height: 1.5em;
+	font-style: normal;
+	font-weight: normal;	
+	text-align: left; 
 }
+
 p + p,
 .indent {
-	text-indent: 2em;
+	text-indent: 1.5em;
 	margin-top: 0;
+	
 }
 .nonindent,
 .no-indent {
 	text-indent: 0;
-	margin-top: 1em;
+	margin-top: 1em;  
 }
+
+.hanging-indent {
+	padding-left: 1em;
+    text-indent: -1em;
+}
+
 
 p + ul {
 	margin-top: 10px;
 }
+
+/* TABLES */
+
+table {
+	border-collapse: collapse;
+	margin-bottom: 30px;
+	margin-top: 30px;
+	text-align: left;
+	width:100%;
+	border: 1px solid #000;
+	border-width: 1px 0;
+    font-size: 0.8em;
+	font-family: "Ariel", "Helvetica", sans-serif;
+	page-break-inside: avoid;
+}
+
+th {
+    border-bottom: 1px solid #333;
+    padding: 10px 10px 5px;
+    font-size: 0.9em;
+	font-family: "Ariel", "Helvetica", sans-serif;
+}
+td {
+    border-top: 1px solid #333;
+    padding: 10px;
+    font-size: 0.8em;
+	font-family: "Ariel", "Helvetica", sans-serif;
+}
+
+/* DEFINITION LISTS */
+
+dt {
+	float: left;
+	font-weight: bold;
+	margin-right: 5px;
+	margin-bottom: 0;
+}
+
+dl { 
+	margin-bottom: 30px;
+}
+
+dd {
+	margin-bottom: 20px;
+}
+
+
+/* ORDERED & UNORDERED LISTS */
+
+ol {
+	padding-left: 1.5em;	
+}
+
+ul {
+	list-style: disc;
+ 	padding-left: 1.5em;	
+}
+ul ul,
+ul ul ul {
+	list-style-type: none;
+}
+ul li li {
+	list-style-image: url('images/em-dash.png');
+
+}
+ul li li li {
+	list-style-image: url('images/asterisk.png');
+}
+
+/* CITE */
+
+cite {
+	font-weight: normal;
+}
+
+/* BLOCKQUOTES */
+
+div.blockquote,
+blockquote {
+	border-width: 0 4px;
+	padding: 0 5%;
+	margin-bottom: 2em;
+}
+
+blockquote.bq_2 {
+    border-width: 0 4px;
+	padding: 0 5%;
+	margin-bottom: 2em;
+	font-style: italic;
+}
+p.bl_nonindent {
+	margin: 2em 10% 0;
+	text-indent: 0;
+}
+p.bl_indent {
+	margin: 0 10%;
+	text-indent: 1em;
+}
+
+
+
+
+/* SEPARTORTS */
+
+h3.section_break {
+	text-align: center;
+	text-indent: 0;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+h3.page_break {
+	text-align: center;
+	text-indent: 0;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	page-break-after: always;
+}
+
 hr {
 	margin: 10px auto;
 	text-align: center;
@@ -66,369 +286,102 @@ hr.break-symbols:after {
 	content: "\2725";
 	text-align: center;
 }
-table {
-	border: 1px solid #000;
-	border-width: 1px 0;
-}
-dt {
-	float: left;
-	font-weight: bold;
-	margin-right: 5px;
-	margin-bottom: 0;
-}
-dd {
-	margin-bottom: 0;
-}
-ol {
-	padding-left: 2em;	
-}
 
-ul {
-	list-style: disc;
- 	padding-left: 30px;	
-}
-ul ul,
-ul ul ul {
-	list-style-type: none;
-}
-ul li li {
-	list-style-image: url('images/em-dash.png');
 
-}
-ul li li li {
-	list-style-image: url('images/asterisk.png');
-}
-table {
-	border-collapse: collapse;
-	margin-bottom: 30px;
-	text-align: left;
-	width:100%;
-}
-th {
-    border-bottom: 1px solid #333;
-    padding: 10px 10px 5px;
-}
-td {
-    border-top: 1px solid #333;
-    padding: 10px;
-}
 
-dl { 
-	margin-bottom: 30px;
-}
-dt {
-	color:#333;
-	font-weight: bold;
-}
-dd {
-	margin-bottom: 20px;
-}
-cite {
-	font-weight: normal;
-}
 
-div.blockquote,
-blockquote {
-	border-width: 0 4px;
-	padding: 0 5%;
-	margin-bottom: 2em;
-}
-p.bl_nonindent {
-	margin: 2em 10% 0;
-	text-indent: 0;
-}
-p.bl_indent {
-	margin: 0 10%;
-	text-indent: 1em;
-}
-.hanging-indent {
-	padding-left: 1em;
-    text-indent: -1em;
-}
-
-/* TITLE PAGE
+/* TITLE PAGE STYLING
 ======================= */
 #title-page {
     text-align: center;
+	font-family: "Palatino", "Georgia", "Times New Roman", serif;
+
 }
 #title-page > .title {
 	font-size: 2em;
 	margin-top: 10%;
-	margin-left: auto;
-	margin-right: auto;
-	width: 50%;
+	text-align: center;
+    padding-left: 25%;
+    padding-right: 25%;
 	font-style: italic;
 	line-height: 44px;
 }
 #title-page > .subtitle {
+	text-align: center;
 	font-size: 1em;
-	margin-top: 2cm;
+	margin-top: 2em;
 	font-variant: small-caps;
-	width: 60%;
-	margin-left: auto;
-	margin-right: auto;
+	padding-left: 20%;
+    padding-right: 20%;
 	font-weight: bold;
 }
 #title-page > .author {
+	text-align: center;
 	font-size: 0.875em;
 	font-weight: normal;
 	font-variant: small-caps;
-	margin-top: 5em;
+	margin-top: 4em;
 	font-weight: bold;	
 }
 #title-page > .publisher {
+	text-align: center;
 	font-size: 0.8em;
 	font-weight: lighter;
-	margin-top: 7em;
+	margin-top: 5em;
 	margin-bottom: 10px;
 	text-transform: uppercase;
 }
 #title-page > .publisher-city {
+	text-align: center;
 	font-size: 0.8em;
 	font-weight: lighter;
 	margin-top: 0;
 }
 
-/* DEDICATION
-================ */
-.dedication > div.front-matter-ugc p {
-	text-align: center;
+
+/* FRONT-MATTER STYLING 
+========================*/
+
+div.dedication p {
+	margin-top: 5em;
+    margin-left: 15%;
+	margin-right: 15%;
 }
 
-/* COPYRIGHT PAGE
-=================== */
-#copyright-page > div.ugc p {
-	font-family: "Arial", "Helvetica", sans-serif;
-	font-size: 0.7em;
-    text-indent: 0;
-    margin-bottom: 0.5em;
-    text-align: center;
-}
-
-/*  BODY TITLES
- ================== */
-.ugc h1, 
-.ugc h2, 
-.ugc h3, 
-.ugc h4, 
-.ugc h5, 
-.ugc h6 {
-	margin-bottom: 0.5em;
-	page-break-after:avoid;	
-}
-
-.ugc.back-matter-ugc h1,
-.ugc.part-ugc h1,
-.ugc.chapter-ugc h1,
-.ugc.front-matter-ugc h1 {
-	font-size: 1.2em;
-	font-weight: bold;
-	font-style: italic;
-}
-.ugc.back-matter-ugc h2,
-.ugc.part-ugc h2,
-.ugc.chapter-ugc h2,
-.ugc.front-matter-ugc h2 {
-	font-size: 1em;
-	font-weight: bold;
-	font-style: italic;
-}
-.ugc.back-matter-ugc h3,
-.ugc.part-ugc h3,
-.ugc.chapter-ugc h3,
-.ugc.front-matter-ugc h3 {
-	font-size: 1em;
-	font-weight: normal;
-	margin-left: 0em;
-	font-style: italic;
-}
-.ugc.back-matter-ugc h4,
-.ugc.part-ugc h4,
-.ugc.chapter-ugc h4,
-.ugc.front-matter-ugc h4 {
-	font-size: 0.875em;
-	font-weight: bold;
-	text-transform: uppercase;
-}
-.ugc.back-matter-ugc h5,
-.ugc.part-ugc h5,
-.ugc.chapter-ugc h5,
-.ugc.front-matter-ugc h5 {
-	font-size: 0.875em;
-	font-weight: normal;
-	text-transform: uppercase;
-}
-.ugc.back-matter-ugc h6,
-.ugc.part-ugc h6,
-.ugc.chapter-ugc h6,
-.ugc.front-matter-ugc h6 {
-	font-size: 0.875em;
-	font-weight: bold;
-	font-style: italic;
-}
-.ugc h1 + p,
-.ugc h2 + p,
-.ugc h3 + p,
-.ugc h4 + p,
-.ugc h5 + p {
+div.dedication p + p {
 	margin-top: 0;
 }
 
-/*  TITLES for FRONT-MATTER, BACK_MATTER, CHAPTER & PART  
-========================================================= */
-.display-none, .front-matter-number, .back-matter-number {
-	display: none;
-}
-.part-title {
-    font-size: 1.4em;
-    line-height: 1.6em;
-    margin: 1.2em auto;
-    padding: 15px 15px 0 0;
-}
-.chapter-number {
-	font-size: 2.4em;
-	font-weight: normal;
-    line-height: 1.2em;
-    margin: 20px 0 -0.5em;
-}
-.part-title {
-	font-size: 2em;
-	text-transform: uppercase;
-}
-.front-matter-number,
-.front-matter-title,
-.back-matter-title,
-#toc > h1 {
-    font-size: 1.7em;
-	margin:1em 0 3em;
-	text-align: center;
-	font-style: italic;
-}
-.part-number {
-	font-weight: normal;
-	text-align: center;
-	
-}
-div.part-title-wrap > h3.part-number:before {
-	content: "Part ";
-	text-transform: uppercase;
-
-}
-.part-title {
-	text-align: center;
-}
-.chapter-title-wrap {
-    font-size: 1.1em;
-	margin:1.6em auto 2.6em auto;
-	text-align: center;
-}
-.chapter-title-wrap .chapter-number,
-.chapter-title-wrap .chapter-title {
-	display: block;
-}
-.chapter-title-wrap .chapter-title {
-	font-weight: normal;
-	font-style: italic;
-	font-weight: bold;
+div.epigraph p  {
+	margin-top: 5em;
+	margin-left: 15%;
+	margin-right: 15%;
 }
 
-.chapter-title-wrap > .chapter-number {
-    font-size: 1.3em;
-	font-weight: normal;
-	padding-right: 10px;
-	margin-bottom: 3em;
-	font-weight: bold;
+div.epigraph p + p {
+	margin-top: 0;
 }
 
-
-
-/* OLD TABLE OF CONTENT 
- ===================== 
-
-#toc {
-	font-size: 1em;
-	text-align: left;
-	font-style: italic;
-}
-#toc ul > .front-matter,
-#toc ul > .back-matter {
-	font-style: italic;
-}
-#toc .part,
-#toc .front-matter + .chapter {
-	margin-top: 1.3em;
-}
-#toc a {
-	border: none;
-	color: #000;
-}
-#toc ul, #toc li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-#toc ul {
-	line-height: 1.2em;
-}
-#toc a:after {
-  font-style: normal;
-  text-decoration: none;
-}
-#toc .part {
-	margin: 1em 0 0.4em;
-}
-#toc .chapter {
-	margin-right: 0.75em;	
-}
-#toc span.chapter-author {
-	font-style: italic;
-}
-#toc .chapter + .back-matter {
-	margin-top: 1.3em;
-	font-style: normal;
-}
-#toc span.chapter-author,
-#toc span.chapter-subtitle {
-	display: block;
-	margin-left: 1em;
-}
-#toc span.chapter-author,
-#toc span.chapter-subtitle {
-	margin-bottom: 5px;
-}
-#toc span.chapter-subtitle + 
-span.chapter-author {
-	margin-top: -5px;
-	margin-bottom: 5px;
-}
-#toc span.chapter-subtitle {
-	font-style: normal;
-	font-weight: normal;
-	margin-left: 1.3em;
-}
-#toc span.chapter-author{
-	font-style: normal;
-	font-weight: bold;
+#copyright-page p {
+	font-family: "Arial", "Helvetica", sans-serif;
 	font-size: 0.8em;
-	text-transform: uppercase;
-}
-#toc li span.chapter-author{
-	font-size: 12pt !important;
-	margin-left: 1.5em;
-}
-#toc li.front-matter,
-#toc li.part,
-#toc li.chapter,
-#toc li.back-matter{
-	margin-bottom: 1em;
-	font-weight: normal;
+	line-height: 1.1em;
+    text-indent: 0;
+    margin-bottom: 0.5em;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
 }
 
-/* NEW TABLE OF CONTENT 
+
+
+/* TABLE OF CONTENTS 
  ===================== */
 
 #toc {
+	font-family: "Palatino", "Georgia", "Times New Roman", serif;
 	text-align: left;
+	font-weight: normal;
 }
 #toc ul > .front-matter,
 #toc ul > .back-matter {
@@ -464,10 +417,12 @@ span.chapter-author {
 	margin-right: 0.75em;
 	font-size: 0.9em;
 	font-style: italic;	
+	font-weight: normal;
 }
 
 #toc .chapter + .back-matter {
 	margin-top: 1.3em;
+	font-weight: normal;
 }
 
 #toc span.chapter-subtitle {
@@ -520,11 +475,286 @@ span.chapter-author {
 }
 
 
-/* IMAGES
-================== */
+/* CHAPTER & PART TITLES:
+TITLES, NUMBERS, SUBTITLE, AUTHOR, APHORISM
+FONT-MATTER & BACKMATTER 
+============================================= */
+
+/* DISPLAY NONE:
+REMOVES CHAPTER NUMBERING 
+ON FRONT-MATTER + BACK-MATTER TITLES */
+
+.display-none, 
+.front-matter-number, 
+.back-matter-number {
+	display: none;
+}
+
+/* PART TITLE */
+
+div.part-title-wrap > h3.part-number:before {
+	content: "Part ";
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+div.part-title-wrap h3.part-number {
+	font-weight: bold;
+	text-align: center;	
+}
+
+div.part-title-wrap h1.part-title {
+	font-family: "Palatino", "Georgia", "Times New Roman", serif;
+    line-height: 1.2em;
+    margin: 1.2em auto;
+    padding: 15px 15px 0 0;
+    font-size: 2em;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+
+
+
+/*CHAPTER TITLES */
+
+div.chapter-title-wrap .chapter-number,
+div.chapter-title-wrap .chapter-title {
+	font-family: "Palatino", "Georgia", "Times New Roman", serif;
+	display: block;
+}
+
+div.chapter-title-wrap > .chapter-number {
+	font-family: "Palatino", "Georgia", "Times New Roman", serif;
+	text-align: center;
+    font-size: 1.4em;
+	font-weight: normal;
+/*	padding-right: 10px; */
+	margin-bottom: 3em;
+}
+
+div.chapter-title-wrap {
+	font-family: "Palatino", "Georgia", "Times New Roman", serif;
+	margin:1.6em auto 4em auto;
+	text-align: center;
+}
+
+
+div.chapter-title-wrap h3.chapter-number {
+    font-family: "Palatino", "Georgia", "Times New Roman", serif;
+	font-size: 1.4em;
+	font-style: italic;
+	font-weight: normal;
+    line-height: 1.2em;
+    margin: 20px 0 -0.5em;
+}
+
+div.chapter-title-wrap h2.chapter-title {
+    font-family: "Palatino", "Georgia", "Times New Roman", serif;
+	font-size: 1.7em;
+	font-weight: bold;
+	font-style: italic;
+    line-height: 1.2em;
+    text-align: center;
+    margin: 3em 0 -0.5em;
+}
+
+
+
+/* TOC TITLE */
+
+#toc > h1 {
+	font-family: "Palatino", "Georgia", "Times New Roman", serif;
+    font-size: 1.7em;
+	margin:1em 0 3em;
+	text-align: center;
+	font-style: italic;
+}
+
+
+/* FRONT-MATTER TITLES */
+
+div.front-matter-title-wrap h1.front-matter-title {
+	font-family: "Palatino", "Georgia", "Times New Roman", serif;
+    font-size: 1.7em;
+    line-height: 1.2em;
+    margin: 3em 0 2.5em;
+	font-weight: bold;
+	text-align: center;
+	font-style: italic;
+}
+
+/* BACK-MATTER TITLES */ 
+
+div.back-matter-title-wrap h1.back-matter-title {
+	font-family: "Palatino", "Georgia", "Times New Roman", serif;
+    font-size: 1.7em;
+	line-height: 1.2em;
+    margin: 3em 0 2.5em;
+	text-align: center;
+	font-weight: bold;
+	font-style: italic;
+}
+
+
+/*CHAPTER SUBTITLES, CHAPTER AUTHOR & APHORIMS */
+
+div.ugc > h2.chapter-subtitle {
+	font-family: "Palatino", "Georgia", "Times New Roman", serif;
+	font-weight: lighter;
+	font-size: 1.2em;
+	font-style: normal;
+	padding-top: 0.2em;	
+	text-align: center;
+    margin: -2.5em 0 3em;
+}
+
+div.ugc > h2.chapter-author {
+	font-family: "Palatino", "Georgia", "Times New Roman", serif;
+	font-style: normal;
+	text-align: center;
+	font-size: 0.9em;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: -1.5em 0 3em;
+}
+
+div.ugc h2.chapter-subtitle + h2.chapter-author {
+	margin-top: -2em;
+}
+.aphorism {
+	font-size: 1em;
+    font-style: italic;
+    margin: 0 0 4em 50%;
+}
+.aphorism p {
+	text-align: right;
+}
+.aphorism cite {
+    display: block;
+   	font-size: 0.875em;
+    font-style: normal;
+    font-variant: small-caps;
+    text-align: right;
+}
+.aphorism cite:before {
+	content: "–";
+}
+
+/* SPECIAL STYLING 
+==================== */
+
+/* ASIDES & PULLQUOTES */
+
+aside {
+	font-style: italic;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	margin: 2em 10%;
+    padding: 10px 0;	
+	text-indent: 0;
+    font-style: italic;
+}
+
+.pullquote {
+	border: 1px solid #000;
+	border-width: 1px 0;
+	margin: 20px auto;
+	padding: 5px 0;
+    font-style: italic;
+	text-align: center;
+	width: 45%;
+}
+.pullquote-left {
+	border: 1px solid #000;
+	border-width: 1px 0;
+	float: left;
+	margin: 15px 15px 15px 0;
+	padding: 5px 0;
+	text-align: center;
+	font-style: italic;
+	width: 45%;
+}
+.pullquote-right {
+	border: 1px solid #000;
+	border-width: 1px 0;
+	float: right;
+	margin: 15px 0 15px 15px;
+	padding: 5px 0;
+	font-style: italic;
+	text-align: center;
+	width: 45%;
+}  
+
+
+/* TEXTBOXES & DARK BACKGROUNDS*/
+
+.textbox {
+	border: 1px solid #000;
+	margin: 10px 0;
+	padding: 10px;
+	font-size: 0.9em;
+	font-family: "Ariel", "Helvetica", sans-serif;
+}
+.shaded {
+	background-color: #eee;
+	font-size: 0.9em;
+	font-family: "Ariel", "Helvetica", sans-serif;
+}
+.textbox p {
+	margin-top: 0;
+	font-size: 0.9em;
+	font-family: "Ariel", "Helvetica", sans-serif;
+}
+
+
+div.dark_background { 
+	background-color: #DABDBD;
+	border: 1px dotted #904949;
+	margin: 2em 0.5em 2em 0.5em;
+	padding: 2em;
+    page-break-before: always;
+}
+
+div.dark_background_border { 
+    background-color: #DABDBD;
+    border: 3px double #904949;
+    margin: 2em 0.5em 2em 0.5em;
+	padding: 2em;
+    page-break-before: always;
+}
+
+
+
+/* FOOTNOTES */
+   
+.footnotes {
+	display: block;	
+    font-size: 0.875em;
+    margin: 20px 10px 40px 0px;
+}
+.footnotes-wrap {
+	list-style: none;
+	display: block;
+	margin: 10px 10px 10px 40px;
+}
+.footnotes p + p {
+	text-indent: 0;
+} 
+.footnotes .footnotes-wrap p {
+	text-indent: -1em;
+}
+.footnotes p a {
+	display: block;
+	text-decoration: none;
+}
+
+/* IMAGES 
+=========== */
+
 img {
 	height: auto;
-  	max-width: 100%;
+	max-width: 100%;	
 }
 .alignleft {
 	float: left;
@@ -551,12 +781,21 @@ img.aligncenter {
 }
 .wp-caption {
 	height: auto;
+	max-width: 90%;
+	padding-left: 5%;
+	padding-right: 5%;
+	margin: 1em 0;		
 }
 .wp-caption-text {
-	font-size: 0.875em;
-	font-style: italic;
+	color: #4E4E4E;
+	font-size: 0.75em;
 	margin-top: 5px;
+	text-align: left;
 }
+.wp-caption-text span {
+	font-style: normal;
+}
+
 div.wp-caption.aligncenter,
 div.wp-caption.alignleft,
 div.wp-caption.alignright,
@@ -565,164 +804,23 @@ div.wp-caption.alignnone {
 	width: auto !important;
 }
 
-/* SUBTITLES, CHAPTER AUTHOR & APHORIMS
-======================================== */
-h2.chapter-subtitle {
-	font-weight: normal;
-	font-size: 1.2em;
-	margin-bottom: 2.8em;
-    padding-top: 0.2em;	
-	text-align: center;
-	font-style: normal !important;
-}
-h2.chapter-author {
-	font-style: normal;
-	text-align: center;
-}
-h2.chapter-subtitle,
-h2.chapter-author {
-    font-size: 1.3em !important;
-    font-variant: normal;
-    margin: 0em 0 3em;
-}
-h2.chapter-author {
-    font-size: 1.1em !important;
-    font-variant: normal;
-    text-transform: uppercase;
-    font-style: normal !important;
-    font-weight: bold !important;
-}
-h2.chapter-subtitle + h2.chapter-author {
-	margin-top: -2em;
-}
-.aphorism {
-	font-size: 1em;
-    font-style: italic;
-    margin: 0 0 4em 50%;
-}
-.aphorism p {
-	text-align: right;
-}
-.aphorism cite {
-    display: block;
-   	font-size: 0.875em;
-    font-style: normal;
-    font-variant: small-caps;
-    text-align: right;
-}
-.aphorism cite:before {
-	content: "–";
-}
+/* SPECIAL BACK-MATTER PAGE STYLES 
+=================================== */
 
-/* ASIDES, PULLQUOTES & TEXTBOXES
-================================== */  
-aside {
-	font-style: italic;
-	border-top: 1px solid #000;
-	border-bottom: 1px solid #000;
-	margin: 2em 10%;
-    padding: 10px 0;	
-	text-indent: 0;
-}
-.textbox {
-	border: 1px solid #000;
-	margin: 10px 0;
-	padding: 10px;
-}
-.textbox.shaded {
-	background-color: #eee;
-}
-.textbox p {
-	margin-top: 0;
-}
-.textbox-caption {
-	display: block;
-	font-size: 0.9em;
-	font-weight: bold;
-	margin: 0;
-}
-.pullquote {
-	border: 1px solid #000;
-	border-width: 1px 0;
-	margin: 20px auto;
-	padding: 5px 0;
-	text-align: center;
-	width: 45%;
-}
-.pullquote-left {
-	border: 1px solid #000;
-	border-width: 1px 0;
-	float: left;
-	margin: 15px 15px 15px 0;
-	padding: 5px 0;
-	text-align: center;
-	width: 45%;
-}
-.pullquote-right {
-	border: 1px solid #000;
-	border-width: 1px 0;
-	float: right;
-	margin: 15px 0 15px 15px;
-	padding: 5px 0;
-	text-align: center;
-	width: 45%;
-}  
+/* BIBLIOGRAPHY */
 
-/*  FOOTNOTES & ENDNOTES
-   ======================== */     
-.footnotes {
-	display: block;	
-    font-size: 0.875em;
-    margin: 20px 10px 40px 0px;
-}
-.footnotes-wrap {
-	list-style: none;
-	display: block;
-	margin: 10px 10px 10px 40px;
-}
-.footnotes p + p {
-	text-indent: 0;
-} 
-.footnotes .footnotes-wrap p {
-	text-indent: -1em;
-}
-.footnotes p a {
-	display: block;
-	text-decoration: none;
-}
-.endnotes hr {
-	border: none;
-	margin-top: 1cm;
-}
-.endnotes h3 {
-	margin-bottom: 0;
-}
-.endnotes ol {
-	font-size: 0.75pt;
-	margin-top: 5px;
-	margin-left: 0;
-}
-.endnotes li {
-	text-indent: 2em;
-}
-.endnotes p + p {
-	text-indent: 0;
-}	
-
-/* BIBLIOGRAPHY
- =============== */
 .bibliography p  {
 	padding-left: 1em;
 	text-indent: -1em;
 }
 
-/* INDEX
-================== */
+/* INDEX  */
+
 .index .ugc  {
 	text-align: left;
 
 }
-.index .ugc  div {
+.index .ugc div {
 	margin-bottom: 4em;
 }
 .index > div.back-matter-ugc  p {
@@ -733,17 +831,5 @@ aside {
 }
 .index .ugc  p.sub-entry {
 	padding-left:30px;
-}
-.part .part-number,
-.part .part-title{
-	text-align: left;
-}
-h2.chapter-author{
-	text-transform: uppercase;
-}
-.wp-caption-text{
-	margin: 0 auto;
-    text-align: left;
-    width: 250px;
 }
 
