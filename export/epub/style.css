@@ -139,13 +139,17 @@ p + p,
 	margin-top: 0;
 	
 }
-.nonindent,
-.no-indent {
+div.ugc p.nonindent {
 	text-indent: 0;
 	margin-top: 1em;  
 }
 
-.hanging-indent {
+div.ugc p.no-indent {
+	text-indent: 0;
+	margin-top: 1em;  
+}
+
+div.ugc p.hanging-indent {
 	padding-left: 1em;
     text-indent: -1em;
 }
