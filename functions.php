@@ -24,7 +24,7 @@ add_action( 'wp_print_styles', 'laurence_enqueue_styles' );
 function laurence_theme_pdf_css_override( $css ) {
 
 	// Translate "Part" to whatever language this book is in
-	$css .= '#toc .part a::before { content: "' . __( 'part', 'pressbooks' ) . ' "counter(part) ". "; }' . "\n";
+	$css .= '#toc .part a::before { content: "' . __( 'Part', 'pressbooks' ) . ' "counter(part) ". "; }' . "\n";
 	$css .= 'div.part-title-wrap > h3.part-number:before { content: "' . __( 'part', 'pressbooks' ) . ' "; }' . "\n";
 
 	return $css;
