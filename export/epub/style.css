@@ -698,7 +698,7 @@ aside {
 	font-size: 0.9em;
 	font-family: "Ariel", "Helvetica", sans-serif;
 }
-.shaded {
+div.textbox .shaded {
 	background-color: #eee;
 	font-size: 0.9em;
 	font-family: "Ariel", "Helvetica", sans-serif;
