@@ -1045,28 +1045,54 @@ sup.endnote {
     vertical-align: top;
 }
 
-/* ENDNOTES
-================== */
+/* ENDNOTES OLD
+================== 
+.endnotes {
+  font-size: 0.9em;
+  line-height: 1.25em;
+}
+
 .endnotes hr {
   border: none;
   margin-top: 1cm;
 }
 .endnotes h3 {
-  margin-bottom: 0;
+  page-break-before: always;
+  font-style: italic;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
 }
 .endnotes ol {
-  font-size: 8pt;
-  margin-top: 5px;
-  margin-left: 0;
+  margin: 0;
+  padding-left: 20px;
 }
-.endnotes li {
-  padding-left: 2em;
-  text-indent: -2em; 
+
+.endnotes ol li {
+  margin: 0px;
+  padding: 0px;
+  text-indent: -1.5em;
+  margin-left: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.endnotes ul {
+    margin:0;
+    padding-left: 30px;
+}
+
+.endnotes ul li {
+    margin: 0px;
+    padding: 0px;
+    text-indent: 1em;
+    margin-left: -1em;
 }
 
 .endnotes p + p {
   text-indent: 0;
 }
+
+
+
 /* CUT AND PASTE FROM EPUB FORTRESS.CSS
 ================== */
 
@@ -1352,8 +1378,8 @@ sup.endnote {
   vertical-align: top;
 }
 
-/* ENDNOTES
-================== */
+/* ENDNOTES old
+================== 
 .endnotes{
   margin-left: 0px;
   padding-left: 0px;
@@ -1378,6 +1404,34 @@ sup.endnote {
 }
 .endnotes p{
   text-indent: 1em;
+}
+
+*/
+
+/* ENDNOTES NEW */
+.endnotes h3 {
+  page-break-before: always;
+  font-style: italic;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+}
+.endnotes hr {
+  border: none;
+  margin-top: 1cm;
+}
+
+.endnotes ol {
+  font-size: 8pt;
+  margin-top: 5px;
+  margin-left: 0;
+  list-style-position: outside;
+}
+.endnotes li {
+   margin-top: 10px;
+}
+
+.endnotes p + p {
+  text-indent: 0;
 }
 
 /* SPECIAL PAGES */
